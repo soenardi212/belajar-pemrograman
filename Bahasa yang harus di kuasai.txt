@@ -1,0 +1,5 @@
+Bahasa yang harus di kuasai seorang FE:
+-html
+-CSS
+-Java script
+-php

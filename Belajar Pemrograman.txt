@@ -1,5 +1,0 @@
-Bahasa yang harus di kuasai :
--membuat latihan html
--membuat latihan CSS
--membuat latihan java script
--membuat latihan php
