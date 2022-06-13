@@ -4,3 +4,5 @@ array
 object
 fungction
 loop
+html DOM
+variabel
