@@ -1,0 +1,5 @@
+Basic Javascript yg harus di pelajari :
+type data
+array
+object
+fungction
