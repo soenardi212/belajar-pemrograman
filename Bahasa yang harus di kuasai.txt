@@ -3,3 +3,4 @@ Bahasa yang harus di kuasai seorang FE:
 -CSS
 -Java script
 -php
+-dari aku framework
