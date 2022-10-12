@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<!-- Membuat Objek dgn function konstraktor -->
+<body>
+<script>
+  function NilaiObj(nama,umur,alamat,tinggal){
+    this.nama = nama;
+    this.umur = umur;
+    this.alamat = alamat;
+    this.tinggal = tinggal;
+  }
+  const nilai1 = new NilaiObj('Helmi',27,'Rt: 011 Rw: 04','Jakarta');
+  
+  console.table(nilai1);
+  console.log(nilai1.alamat);
+  
+//cara menambahkan properti pd object
+  const dataAlpha = {
+    'name': 'Soenardi',
+    'usia': 27,
+    'hobby': 'Coding'
+  }
+  dataAlpha.sekolah = 'darul ahkam';
+  dataAlpha['kelas'] = '3 SMA';
+
+//delete dataAlpha.nama;
+//ini cara menghapus property nya
+  console.table(dataAlpha);
+  
+</script>
+</body>
+
+</html>

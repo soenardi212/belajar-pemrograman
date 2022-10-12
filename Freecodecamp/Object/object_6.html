@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>latihan</title>
+</head>
+
+<body>
+<script>
+  const mahasiswa = {
+    nama:'Helmi',
+    umur:27,
+    agama:'Islam'
+  }
+  const satu = mahasiswa.nama;
+  console.log(satu);
+  //tag ES6
+  const {nama,umur,agama} = mahasiswa;
+  console.log(agama);//Islam
+  
+  const hewan = {
+    jenis:'ular',
+    jumlah:10,
+    berat:'5 kg'
+  }//mengubah nama object
+  const {jenis:tipeHewan,jumlah:jumlahHewan} = hewan;
+  console.log(tipeHewan);
+  //sekarang nama object 'jenis' sdh tdk ada karna di ganti menjadi 'tipeHewan'
+</script>
+</body>
+
+</html>

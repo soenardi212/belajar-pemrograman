@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<!-- jika nama objek nya mengandung spasi , maka gunakan tanda kurung siku ([])utk mengaksesnya -->
+<body>
+<script>
+  const data = {
+    'nama': 'Helmi',
+    'umur': 27,
+    'tinggal': 'Kembangan',
+    'alamat' : ['Rt = 11','Rw = 04']
+  }
+  console.log(data.nama);
+  console.log(data.alamat[0]);//Rt = 11
+  
+  const test = {
+    'nama hewan': "komeng",
+    'warna hewan': 'coklat',
+    'type kucing': "anggora"
+  }
+  console.log(test['nama hewan']);//komeng
+  
+  //Gunakan Object.freeze untuk membekukan data/value object
+  const tipeHewan = {
+    'jenis':'anjing',
+    'kaki':4,
+    'ekor':1,
+    'warna':'hitam'
+  }
+  Object.freeze(tipeHewan);
+  tipeHewan.warna = 'merah';
+  tipeHewan.kaki = 6;
+  console.table(tipeHewan);
+  
+  
+  //ES6 
+  const percobaan = (namaBuah,warna,harga) => {
+    return ({namaBuah,warna,harga});
+  }
+  console.log('Jeruk','Orange','10.000');
+</script>
+</body>
+
+</html>

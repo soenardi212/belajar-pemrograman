@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>latihan</title>
+</head>
+
+<body>
+  <details>
+    <summary>
+      Helmi
+    </summary>
+    Hallo helmi apa kabar 
+  </details>
+  
+<script>
+  const dataSiswa = {
+    nama: 'bakrun',
+    umur: 30,
+    alamat: 'jakarta'
+  }
+//ini cara mengubah nilai objek
+  dataSiswa.nama = 'fulan bin fulan';
+  dataSiswa['umur'] = 50; //cara spt ini jg bisa 
+  console.table(dataSiswa);
+  
+//ini cth mengakses obj dengan nama variabel , nama var tdk menggunakan tanda kutip
+  const namaku = 'nama';
+  const dataBaru = dataSiswa[namaku];
+  console.log(dataBaru);
+  
+  const umurku = 'umur';
+  const dataBaruuu = dataSiswa[umurku];
+  console.log(dataBaruuu);
+</script>
+</body>
+
+</html>

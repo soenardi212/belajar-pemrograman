@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>distraktering</title>
+</head>
+<!-- mengganti nama properti object dgn ES6 -->
+<body>
+<script>
+  const user = {
+    jhonDoe:{
+      umur:30,
+      email:'bricomraider@gmail.com'
+    }
+  }
+  //ini cara dgn ES6
+  const {jhonDoe:{age,email}}=user;
+  console.table(user);
+  
+  const satu = {
+    Helmi:{
+      umurr:27,
+      alamat:'jakarta'
+    }
+  }
+  const {Helmi:{umurr:umurSekarang,alamat:lokasiSekarang}} = satu;
+  console.table(satu);
+  console.log(umurSekarang,lokasiSekarang);
+  
+  const mahasiswa = {
+    nama: 'jaedun ',
+    age: 35,
+    tinggi: '170 cm',
+    agama: 'islam'
+  }
+  const test = ({nama,tinggi}) => 
+  (nama+tinggi);
+  console.log(test(mahasiswa));
+</script>
+</body>
+
+</html>
