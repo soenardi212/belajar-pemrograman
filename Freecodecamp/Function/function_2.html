@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  const isLess = (a, b) =>{
+    return a < b; //ini mengembalikan nilai boolean
+  }
+  console.log(isLess(10, 15)); //TRUE
+
+  function penjumlahan(a,b){
+    const sum = a + b * 2;
+    return sum; 
+  } 
+ // console.log(penjumlahan(5,5)); 15
+ const hasil = penjumlahan(10,25);
+ console.log(hasil); //60
+// jgn lupa KUKABATAKU
+
+  /*function nextInLine(arr,item){
+    console.log(item);
+  }
+  nextInLine([2],1 + 1);
+  const testArr =[1,2,3,4,5];
+  console.log(nextInLine([2],1+1+1));
+  console.log(nextInLine([5,6,7,8,9],1+4));
+  console.log(nextInLine(testArr,10));
+  console.log(testArr[4]+7);*/
+  
+  //cth queue , antrian
+  function nextInLine(arr,item){
+    var queue = arr.push();
+    
+    var remove = arr.shift();
+    
+    return remove;
+  }
+  const testArr = [1,2,3,4,5];
+  console.log(nextInLine(testArr,6));
+  console.table(testArr);
+  
+//operator perbandingan selalu mengembalikan nilai boolean
+  function perbandingan(numm){
+    if(numm == 10){
+      return 'Ini benar';
+    }
+    return 'Ini salah';
+  }
+  console.log(perbandingan(10));
+</script>
+</body>
+
+</html>

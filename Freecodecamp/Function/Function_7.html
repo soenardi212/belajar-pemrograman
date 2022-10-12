@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrow Function</title>
+</head>
+
+<body>
+<script>
+  const myFunc = (arr1,arr2) => {
+    return arr1.concat(arr2);
+  }
+  console.log(myFunc([1,2],[3,4,5]));
+
+  //jika parameternya 1 boleh tdk menggunakan tanda kurung & return
+  const myCount = nama => {
+    return 'saya adalah '+nama;
+  }
+  console.log(myCount('Helmi'));
+  
+  //tdk pakai return
+  const satu = (name) => 'Soenardi';
+  console.log('saya '+satu(name));
+  
+ //cth default parameter
+  const dua = (nama = 'Anonymous') => 'Hello '+ nama;
+  console.log(dua());
+  console.log(dua('Brother'));
+  
+  const tiga = (number,value = 1) => number + value;
+  console.log(tiga(5,5));
+</script>
+</body>
+
+</html>

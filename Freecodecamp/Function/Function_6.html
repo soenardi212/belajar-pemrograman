@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kumpulan method JS</title>
+</head>
+<!-- Membangkitkan bilangan random , Math.random() tdk akan pernah mengembalikan bilangan bulat-->
+<body>
+<script>
+  function satu() {
+    return Math.random();
+  }
+  console.log(satu());
+  
+  function dua() {
+    return Math.floor(Math.random()*20);
+  }
+  console.log(dua());
+//gunakan Math.floor() utk membulatkan bilangan random
+//Math.floor = angka akan selalu di bulatkan ke bawah , misalkan 1,7 akan menjadi nilai 1
+//dua akan selalu bernilai antara 0-19
+
+const abc = parseInt('007');
+console.log(typeof abc);
+//parseInt mengubah string menjadi number,
+function myPar(str) {
+  return parseInt(str);
+}
+console.log(myPar('helmi'));
+</script>
+</body>
+
+</html>

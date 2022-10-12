@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>latihan</title>
+</head>
+
+<body>
+<script>
+  const buah = ['jeruk','anggur','pisang','jambu','tdk mendapatkan apa"'];
+  
+  function tampilkan(par1,par2) {
+    if(par1 > par2){
+      return buah[3];
+    }else if(par1 < par2 ){
+      return buah[0];
+    }
+    else{
+      return buah[4];
+    }
+  }
+  console.log('Selamat utk par1, anda mendapatkan '+tampilkan(4,2));
+  console.log('Selamat utk par2 anda mendapatkan '+tampilkan(1,3));
+  console.log('Maaf kalian berdua '+tampilkan(5,5));
+  
+  const a = 5 >= 5;
+  console.log(a); //TRUE
+  
+</script>
+</body>
+
+</html>

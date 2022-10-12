@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>latihan dgn switch</title>
+</head>
+
+<body>
+<script>
+let count = '';
+  var kartu = (card) => {
+    switch(card){
+      case 2:
+        case 3:
+          case 4:
+            case 5:
+              case 6:
+                count++;
+                break;
+      case 7:
+        case 8:
+          case 9:
+            break;
+            default:
+            count--;
+    }
+    return (count > 0) ? count = ' Bet' : count = ' Hold';
+  }
+  console.log(kartu(-1));
+</script>
+</body>
+
+</html>

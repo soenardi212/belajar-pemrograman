@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>function</title>
+</head>
+
+<body>
+<script>
+//function Deklaration
+  function testimon(a,b){
+    const sum = a + b;
+    console.log(sum);
+  }
+  testimon(5,3);
+  testimon('Hello',' world');
+  
+//function expresion
+  var test = function(numm){
+    return numm + 8;
+  }
+  console.log(test(5));
+  const answer = test(10);
+  console.log(answer); //18
+  
+  function abc(){
+    const a = 'Hello How Are you';
+    console.log(a);
+  }
+  abc(); 
+//console.log(a); , ini akan menyebabkan error , karna var a adalah lokal scope
+  
+  function data(num){
+    sum = num + 5;
+  }
+  console.log(data(1));//undefined,karna tdk pakai return
+</script>
+</body>
+
+</html>
