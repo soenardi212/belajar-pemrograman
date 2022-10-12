@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  const arr1 = ['JAN','FEB','MAR','APR','MEI','JUN'];
+  console.log(...arr1);//jika pakai ini hasilnya string
+  console.log(arr1)//jika pakai ini hasilnya array
+  
+  const arr2 = [30,25,20,15,55,67];
+  console.log(arr2);
+  //ini utk mencari nilai terbesar pd array
+  const arrMax = Math.max(...arr2)
+  console.log(arrMax);
+  
+  //destrukturisasi array
+  const [a,b] = [1,2,3,4,5];
+  console.log(a,b);//1 2
+  
+  const [x,y,,,,z] = [9,8,7,6,5,4];
+  console.log(x,y,z);//9 8 4
+  
+  //mengubah nilai array dgn ES6
+  let i = 20 , u = 25;
+  [i,u] = [u,i];
+  console.log(i,u);//25 20
+  
+  const [q,w, ...arr3] = [30,31,32,33,34,35];
+  console.log(q,w);//30 31
+  console.log(...arr3);//32 33 34 35
+  
+</script>
+</body>
+
+</html>

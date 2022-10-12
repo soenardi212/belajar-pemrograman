@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+
+<script>
+//push() ,Menambahkan nilai di akhir array
+  const arr = [1,2,3];
+  arr.push(4);
+  console.log(arr);
+  
+  const nama = ['Helmi','Dedi'];
+  nama.push(['Baplang','Erni','Susi']);
+  console.table(nama);
+  
+  const data = [['tomat',1],['cabe',2]];
+  console.table(data);
+  
+//pop() , menghapus nilai akhir array dan mengembalikan nilai itu
+  const tes = [1,2,3];
+  const satu = tes.pop();
+  console.log(satu); //3
+  console.log(tes); //[1,2]
+  
+//shift(), menghapus nilai awal array
+  const x = ['Jaedun','B',['Umar']];
+  const y = x.shift();
+  console.table(x);
+  console.log(y); //jaedun
+  
+//unshift() , menambahkan nilai di awal array
+  const myArray = [
+    ['Helmi',27],
+    ['Deddi',35],
+    ['Baplang',25]
+    ];
+  const abc = myArray.shift();
+  const cde = myArray.unshift(['Susi',40]);
+  console.table(myArray);
+  /*console.log(abc); Helmi,27*/
+
+</script>
+
+</body>
+
+</html>

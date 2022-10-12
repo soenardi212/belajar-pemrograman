@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>distraktering</title>
+</head>
+
+<body>
+<script>
+//rest parameter
+  const num = [1,2,3,4,5,6,7,8,9];
+  function remove(list) {
+    const [,,,...abc] = list;
+    return abc;
+  }
+  const abc = remove(num);
+  console.log(abc);//4 5 6 7 8 9
+  /*penjelasan code [,,,...abc] = 
+  ,,, = ini menskip 3 nilai di awal
+  ...abc = ini mengambil sisa nilainya dan di simpan ke dlm var abc*/
+</script>
+</body>
+
+</html>

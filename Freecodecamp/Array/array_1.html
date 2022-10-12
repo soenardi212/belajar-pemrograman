@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<!--jgn pernah gunakan spasi utk array-->
+<body>
+<script>
+//ini di sebut array bersarang atau array multidimensi
+  const team = [
+    ['Team 1',100],
+    ['Team 2',200],
+    ['Team 3',300]
+    ];
+  console.table(team);
+  
+  //cara mengubah data array dgn indeks
+  const nilai = [10,15,20,25];
+  nilai[0] = [60];
+  console.table(nilai);//[60,15,20,25]
+  
+//mengakses array multidimensi dgn indeks
+  const arr = [
+  [1,2,3], //indeks ke-0
+  [4,5,6], //indeks ke-1
+  [7,8,9], //indeks ke-2
+  [[10,11,12],13,14] //indeks ke-3
+  ];
+  console.table(arr);
+  const satu = arr[3];
+  console.log(satu);//[10,11,12],13,14]
+  
+  const dua = arr[3][0];
+  console.log(dua);//[10,11,12]
+  
+  const tiga = arr[3][0][1];
+  console.log(tiga);//[11]
+</script>
+</body>
+
+</html>
