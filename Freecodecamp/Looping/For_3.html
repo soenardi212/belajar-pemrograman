@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membuat tabel perkalian 1-10</title>
+</head>
+
+<body>
+<script>
+
+ /* const satuu = {'perkalian 1': 9};
+  const dua = [1,2,3,4,5,6,7,8,9,10];*/
+  const satu = ['Perkalian Satu'];
+  const dua = ['Perkalian Dua'];
+  const tiga = ['Perkalian Tiga'];
+  const empat = ['perkalian Empat'];
+  const limaa = ['perkalian Lima'];
+  const enam = ['Perkalian Enam'];
+  const tujuh = ['Perkalian Tujuh'];
+  const delapan = ['Perkalian Delapan'];
+  const sembilan = ['Perkalian Sembilan'];
+  const sepuluh = ['Perkalian Sepuluh'];
+  const lima = {
+    'No.1': satu,
+    'No.2': dua,
+    'No.3': tiga,
+    'No.4': empat,
+    'No.5': limaa,
+    'No.6': enam,
+    'No.7': tujuh,
+    'No.8': delapan,
+    'No.9': sembilan,
+    'No.10': sepuluh
+  };
+  
+  /*dua.forEach(function(e,i) {
+     `${i+1} x ${i+1} = ${e++}</br>`;
+  });*/
+  /*for(let i = 1;i<=10;i+=1) {
+    satu.push(i);
+  }
+  console.table(satuu);
+ 
+ /* for(let i = 2; i <= 20; i += 2) {
+    dua.push(i);
+  }
+  console.log(dua);
+  
+  for(let i = 3; i <= 30; i += 3) {
+    tiga.push(i);
+  }
+  console.log(tiga);*/
+  
+  for(let i = 1; i <= 5; i++) {
+    satu.push(`${i} x 1 = ${i*1}`);
+    dua.push(`${i} x 2 = ${i*2}`);
+    tiga.push(`${i} x 3 = ${i*3}`);
+    empat.push(`${i} x 4 = ${i*4}`);
+    limaa.push(`${i} x 5 = ${i*5}`);
+    enam.push(`${i} x 6 = ${i*6}`);
+    tujuh.push(`${i} x 7 = ${i*7}`);
+    delapan.push(`${i} x 8 = ${i*8}`);
+    sembilan.push(`${i} x 9 = ${i*9}`);
+    sepuluh.push(`${i} x 10 = ${i*10}`);
+  }
+  console.table(lima);
+  //console.log('%c'+satu,'color:red;');
+  
+  /*function abc(){
+    for(let y=1;y<=5;y++){
+      enam.push(` 6 x ${y} = ${y*6}`);
+    }
+    console.log('%c'+enam,'color:red;');
+  }
+  abc();*/
+</script>
+</body>
+
+</html>

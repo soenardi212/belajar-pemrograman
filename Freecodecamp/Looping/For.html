@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>for & forEach</title>
+</head>
+
+<body>
+<script>
+  const myArray = [];
+  const satu = [];
+  const dua = [];
+  const tiga = [];
+  
+  for(let i = 0; i < 12; i += 2) {
+    myArray.push(i);
+  }
+  console.log(myArray);//0,2,4,6,8 = bil.genap
+  
+  for(let y=1;y<10;y+=2){
+    satu.push(y);
+  }
+  console.log(satu);//1,3,5,7,9 = bil.ganjil
+  
+  for(let z =10;z>0;z-=2) {
+    dua.push(z);
+  }
+  console.log(dua);//10,8,6,4,2 = hitung.mundur
+  for(let o=9;o>0;o-=2) {
+    tiga.push(o);
+  }
+  console.log(tiga);//9,7,5,3,1
+  
+  
+  //forEach
+  const angka = [1,2,3,4,5];
+  const mhs = ['helmi','sunardi','jaedun','umar'];
+  angka.forEach(function(e){
+    console.log(e * 2);
+  });
+  
+  mhs.forEach(function(elemen,indeks){
+    console.log(`Mahasiswa ke ${indeks+1} adalah ${elemen}`);
+  });
+  
+</script>
+</body>
+
+</html>

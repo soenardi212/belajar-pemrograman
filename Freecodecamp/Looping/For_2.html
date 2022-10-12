@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  const arr = [3,4,9,8,1];
+  let total = 0;
+  
+  for(let i=0;i<arr.length;i++) {
+    console.log(arr[i]);
+  }
+  //Menanbahkan tiap bilangan
+  for(let x=0;x<arr.length;x++) {
+    total += arr[x];//3+4+9+8+1 = 25
+  }
+  console.log(total);//25
+  
+  //looping array multidimensi
+  function multyplAll(tiga) {
+    var product = 1;
+  for(let a=0;a<tiga.length;a++) {
+    for(let j=0;j<tiga[a].length;j++) {
+      product *= tiga[a][j];
+    }//1*2*3*4*5*6*7 = 5040
+  }
+  return product;
+  }
+  console.log(multyplAll([[1,2],[3,4],[5,6,7]]));
+  
+  const baru = () => {
+    for(let z=1;z<=5;z++) {
+      document.writeln(`<h1>Hello world ini no.${z}</h1>`);
+    }
+  }
+  baru();
+  baru();
+</script>
+</body>
+
+</html>
