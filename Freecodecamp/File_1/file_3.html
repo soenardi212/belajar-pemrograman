@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>let</title>
+</head>
+
+<body>
+<script>
+  function checkScope() {
+   let i = 'function scope';
+    if(true) {
+     let i = 'block scope';
+      console.log('Block scope i adalah, '+ i);
+    }
+    console.log('Function scope i adalah, ' + i);
+    return i;
+  }
+  console.log(checkScope());
+  
+  //cara spt ini masih boleh , tp jika pakai const tdk di perbolehkan
+  let nama = 'Helmi';
+  nama = 'sunardi';
+  console.log(nama);
+  
+</script>
+</body>
+
+</html>

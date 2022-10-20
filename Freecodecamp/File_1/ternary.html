@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>op ternary</title>
+</head>
+
+<body>
+<script>
+  function test(a,b) {
+    return a > b ? alert("Ini Adalah Benar"):alert("Anda Salah");
+  }
+  test(2,1);
+  //console.log(test(2,1));
+  //console.log(test(1,1));
+
+  //ternary bersarang
+  function satu(num) {
+    return (num == 0) ? 'Zero'
+    :(num > 0) ? 'positive'
+    :'negative';
+  }
+  console.log(satu(0));
+</script>
+</body>
+
+</html>

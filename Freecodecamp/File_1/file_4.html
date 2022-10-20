@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Const</title>
+</head>
+<!--  utk const:
+1.jika nilai variabelnya berisi object / array , gunakan camelcase
+2.jika variabelnya berisi string,integer & boolean , gunakan uppercase
+-->
+<body>
+<script>
+  const s = [2,5,7];
+  
+  function tampilkan() {
+    s[0]=1;
+    s[1]=8;
+    s[2]=3;
+    return s; //mengubah isi const di perbolehkan dgn indeks
+  }
+  console.log(tampilkan());
+</script>
+</body>
+
+</html>
