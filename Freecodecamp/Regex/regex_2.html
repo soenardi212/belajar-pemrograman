@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regex</title>
+</head>
+<!-- metode match(),match akan mengembalikan string yg kita cari -->
+<body>
+<script>
+  //match syntaknya kebalikan dr test , string dulu baru regex. ini codenya
+  // 'string'.match(/regex/);
+  //cth 1
+  console.log("Hello, World!".match(/Hello/));
+  //cth 2
+  let myString = 'Selamat siang "Bapak Ibu" yg terhormat';
+  let codingRegex = /bapak ibu/i;
+  let result = myString.match(codingRegex);
+  console.log(result);// Bapak Ibu
+  
+  //tambahkan huruf 'g' pd regex agar semua kalimat yg kita cari muncul semua , bukan hanya 1 saja
+  let satu = 'Repeat Repeat Repeat';
+  let dua = /repeat/gi;
+  let hasil = satu.match(dua);
+  console.log(hasil);
+  
+  //cth wildcard
+  let myStr = 'hel8o world';
+  let myRegex = /.o/g;//['8o', 'wo']
+  let hasil2 = myStr.match(myRegex);
+  console.log(hasil2);
+  
+ // i = artinya utk mengabaikan huruf besar & huruf kecil
+ // g = artinya 'global'
+ // . (dot) = artinya utk mengetahui karakter yg ada di dlm string
+ //karakter bisa berupa huruf,angka / symbol
+</script> 
+</body>
+
+</html>

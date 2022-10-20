@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<!-- hati" dlm penulisan karakter \w karna beda arti,
+  jika w kecil = [A-Za-z0-9_]
+  jika W BESAR = [^A-Za-z0-9_] -->
+  
+<body>
+  
+<script>
+
+  // \w sama dgn [A-Za-z0-9_] , \w disebut jg sbg 'kelas karakter pintasan'
+  let longHand = /[A-Za-z0-9_]+/;
+  let shortHand = /\w+/;
+  let numbers = "42";
+  let varNames = "important_var";
+  longHand.test(numbers); //true
+  shortHand.test(numbers); //true
+  longHand.test(varNames); //true
+  shortHand.test(varNames); //true
+
+  let str = 'Hari ini adalah hari selasa';
+  let myRegex = /\w+/g;
+  let hasil1 = str.match(myRegex);
+ 
+  let regexQu = /\w/g;
+  let hasil2 = str.match(regexQu).length;
+ 
+  console.log(hasil1);//ini pakai tanda +
+  console.log(hasil2);//ini tdk
+  //hasil1 menampilkan kata" var str
+  //hasil2 menampilkan jumlah hurufnya
+  
+  
+  //cth dgn \W besar , 
+  //ini sma dgn [^A-Aa-z0-9_]
+  let regenyNya = /\W/g;
+  let stringNya = "42%";
+  let stringg = 'Coding! adalah hoby qu.';
+  let arti1 = stringNya.match(regenyNya);
+  let arti2 = stringg.match(regenyNya);
+  
+  console.log(arti1);
+  console.log(arti2);//spasi ttp di hitung
+</script>
+</body>
+
+</html>

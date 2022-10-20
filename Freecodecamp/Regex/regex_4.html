@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>match</title>
+</head>
+
+<body>
+<script>
+//gunakan karakter ini (^) jika kita ingin membuat sekumpulan karakter yg tdk ingin kita cocokkan
+  let satu = 'Saya hanya mempunyai 1 em@il';
+  let regex1 = /[^123aiueo]/gi;
+  let result1 = satu.match(regex1);
+  console.log(result1);
+  //karakter @ dan spasi akan di tampilkan
+  
+  //pengulangan dilakukan min 1x , menggunakan tanda +
+  let dua = 'missisaples';
+  let regex2 = /s+/i;//['ss']
+  //let regex3 = /s+/gi; ['ss', 's', 's']
+  let result2 = dua.match(regex2);
+  console.log(result2);
+  
+  let myStr = 'hellooo world! hello w3schools';
+  let regexPlus = /lo+/g;
+  let hasilPlus = myStr.match(regexPlus);
+  console.log(hasilPlus);
+  
+  //pengulangan 0 kali , menggunakan *
+  let soccerWord = "Gooooooooal!";//Gooooo
+  let gPhrase = "gut feeling";//g
+  let oPhrase = "over the moon";//null
+  let goRegex = /go*/i;
+  let result3 = soccerWord.match(goRegex);
+  gPhrase.match(goRegex);
+  oPhrase.match(goRegex);
+  console.log(result3);
+  
+  let regexKali = /lo*/g;
+  let hasilKali = myStr.match(regexKali);
+  console.log(hasilKali);
+  
+  //cth gridi dgn menggunakan tanda ? , jika cocok maka pencocokan tdk akan di lanjut lg
+  let tiga = 'titanic';
+  //let regex33 = /t[a-z]*i/;//['titani']
+  let regex33 = /t[a-z]*?i/; //['ti']
+  let result33 = tiga.match(regex33);
+  console.log(result33);
+  
+  let empat = '<h1>Selamat Makan</h1>';
+  let regex4 = /<.*?>/; //'<h1>'
+  let result4 = empat.match(regex4);
+  console.log(result4);
+  //regex defaultnya gridi , maka lahirlah ? , jd jika kalimat yg kita cari sdh cocok maka dia akan berhenti di stu 
+</script>
+</body>
+
+</html>

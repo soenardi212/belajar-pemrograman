@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  //latihan regex serakah (+) , 
+  //mencari penjahat , penjahatnya dikategorikan dgn huruf 'C'
+  let C = 'C';
+  let CC = 'CC';
+  let CCC = 'P1P5P4CCCcP2P6P3';
+  let CCCC = 'P6P2P7P4P5CCCCCP3P1';
+  let angka = '123456'; //null
+  let strKosong = ''; //null
+  
+  let myRegex = /C+/;
+  let result = strKosong.match(myRegex);
+  console.log(result);
+  
+//latihan pengecualian (^)
+//cth mencari string di awal
+  let firstString = "Ricky is first and can be found.";
+  let firstRegex = /^Ricky/;
+  firstRegex.test(firstString);//true
+  let notFirst = "You can't find Ricky now.";
+  firstRegex.test(notFirst);//false
+  let satu = 'Ricky Hello';
+  let hasil = firstRegex.test(satu);//true
+  console.log(hasil);
+//pd kasus ini , jika kalimat yg kita temukan di awal maka ia akan bernilai true , jika di akhir/tengah akan bernilai false
+
+//cth jika ingin mencari string di akhir gunakan tanda $ di akhir regex
+let theEnding = "This is a never ending story";
+let storyRegex = /story$/;
+storyRegex.test(theEnding);//true
+let noEnding = "Sometimes a story will have to end";
+storyRegex.test(noEnding);//false
+
+// \w sama dgn [A-Za-z0-9_] , \w disebut jg sbg 'kelas karakter pintasan'
+let longHand = /[A-Za-z0-9_]+/;
+let shortHand = /\w+/;
+let numbers = "42";
+let varNames = "important_var";
+longHand.test(numbers);//true
+shortHand.test(numbers);//true
+longHand.test(varNames);//true
+shortHand.test(varNames);//true
+
+</script>
+</body>
+
+</html>

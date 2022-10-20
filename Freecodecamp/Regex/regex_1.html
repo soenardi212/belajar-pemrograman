@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regex</title>
+</head>
+<!-- metode test(), test hanya mengembalikan nilai true / false-->
+<body>
+<script>
+  //Regex di gunakan utk mencari sebuah kata, arti dr regex adalah expresi reguler
+  let myString = 'Hello World';
+  let myRegex = /Hello/;
+  let result = myRegex.test(myString);
+  console.log(result); //true
+  // result bernilai true karna kalimat 'Hello' di temukan pd var 'myString'
+  
+  let satu = 'Selamat Datang Helmi';
+  let dua = /helmi/;
+  let hasil = dua.test(satu);
+  console.log(hasil);//false
+  //ini karna regex sangat sensitif terhadap huruf besar & kecil , jika var hasil ingin bernilai true maka tambahkan huruf 'i' di akhir kalimat var dua = /helmi/i , dan ini akan menjadi true.
+  
+  let tiga = 'Aku telah memesan buah jeruk';
+let empat = /apel|mangga|semangka|jeruk/;
+  let hasilOr = empat.test(tiga);
+  console.log(hasilOr);
+//jika kita ingin mencari kata yg lebih dr 1 maka gunakan operator or |
+
+</script>
+</body>
+
+</html>

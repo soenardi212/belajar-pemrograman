@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Match</title>
+</head>
+
+<body>
+<script>
+    //misalkan kita ingin mencari kalimat bag,big,bug, tp tdk dgn beg,bog ,kita dapat membuat regex /b[aiu]g/ untuk melakukan ini. [aiu] Adalah kelas karakter yang hanya cocok dengan karakter , a, i atau u.
+    let myBag = 'bag';
+    let myBig = 'big';
+    let myBug = 'bug';
+    let myBeg = 'beg';
+    let myBog = 'bog';
+    let myRegex = /b[aiu]g/;
+    let hasil1 = myBag.match(myRegex);
+    console.log(hasil1);
+    let hasil2 = myBig.match(myRegex);
+    console.log(hasil2);
+    let hasil3 = myBog.match(myRegex);
+    console.log(hasil3);//null
+    let hasil4 = myBeg.match(myRegex);
+    console.log(hasil4);//null
+  
+  //ini cth utk menemukan semua vokal yg ada pada var empat
+    let empat = 'Semua akan indah podo waktune';
+    let lima = /[aiueo]/gi;
+    let hasilll = empat.match(lima);
+    console.log(hasilll); //e,u,a,a,a,i,a,o,o,a,u,e
+    
+  //ini cth mencocokkan huruf alfabet
+  let catStr = "cat";
+  let batStr = "bat";
+  let matStr = "mat";
+  let bgRegex = /[a-e]at/; //a sampai e.
+  catStr.match(bgRegex);
+  batStr.match(bgRegex);
+  let nilai1 = matStr.match(bgRegex);
+  console.log(nilai1);
+//var matStr akan bernilai null, karna dlm regex yg di cari hanya 'a' sampai 'e'
+
+  //ini cth mencocokkan huruf & angka
+  let angka = '123456789';
+  let regexQu = /[5-9]/g;
+  let nilai2 = angka.match(regexQu);
+  console.log(nilai2);//5,6,7,8,9
+  
+  let stringNya = 'Helmi3173082204951001';
+  let regexNya = /[a-z,0-9]/gi;
+  let hasilNya = stringNya.match(regexNya);
+  console.log(hasilNya);
+</script>
+</body>
+
+</html>

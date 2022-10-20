@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>menentukan jumlah kecocokan atas & bawah</title>
+</head>
+
+<body>
+<script>
+  let A4 = 'Ohhh OOhhhh no';
+  let B2 = 'OOOOOhh Oh OOhh no'
+  let myRegex = /O{2,3}h/g;
+  let result = myRegex.test(B2);
+  console.log(result);
+  console.log(B2.match(myRegex));
+  //khusus cth ini nilai ke-2 dlm  regexnya harus >= nilai ke-1
+  
+  let regeQu = /Oh{2,5} O{2,2}h+ no/;
+  let result1 = A4.match(regeQu);
+  console.log(result1);
+  
+ //cth jika kita hanya ingin match dgn string 'hah' , yg a nya muncul brp kali
+  let str_1 = 'haah haaah';
+  let str_2 = 'haaaah';
+  let str_3 = 'h'+'a'.repeat(10) +'h';
+  let regeQuuu = /ha{3,}h/;
+  let result2 = str_1.match(regeQuuu);
+  console.log(result2);
+  
+</script> 
+</body>
+
+</html>

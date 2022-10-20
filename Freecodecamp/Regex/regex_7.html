@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>karakter jln pintas</title>
+</head>
+<!-- \d = [0-9] ini utk mencocokkan angka saja ,jika \D = [^0-9] -->
+<body>
+<script>
+  // cth \d = [0-9]
+  /*let satu = 'Helmi 0857';
+  let pencocokkan = /\d+/g;
+  let pencarian = /\D/g;
+  
+  let result1 = satu.match(pencocokkan);
+  console.log(result1);//0857
+  
+  let result2 = satu.match(pencarian);
+  console.log(result2);//helmi
+  
+  let dua = /\w+/g;
+  let result3 = satu.match(dua);
+  console.log(result3);
+  
+  
+  //latihan final regex 1-7
+  //membuat password,
+  let tiga = 'Ocean11';
+  let myRegex = /^[A-za-z][A-Za-z]+[\d]*$|^[A-Za-z]+[\d][\d]+$/g;
+  let myResult = tiga.match(myRegex);
+  
+  console.log(myResult);
+  console.log(myRegex.test(tiga));*/
+  
+  let satu = "37ab3082204951001";
+  let myRegex = /[\d][\d][a-z][a-z][\d]/;
+  let result = satu.match(myRegex);
+  
+  console.log(result);
+</script> 
+</body>
+
+</html>
