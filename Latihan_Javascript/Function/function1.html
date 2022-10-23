@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <div class="satu">
+    <fieldset>
+      <legend>
+        <h3>Helmi</h3>
+      </legend>
+    </fieldset>
+  </div>
+<script>
+const h3 = document.querySelector('h3');
+const satu = document.querySelector('div.satu');
+  const fieldset = document.createElement('fieldset');
+  const legend = document.createElement('legend');
+  const hBaru = document.createElement('h3');
+  const teksBaru = document.createTextNode('Percobaan');
+  
+  hBaru.appendChild(teksBaru);
+  legend.appendChild(hBaru);
+  fieldset.appendChild(legend);
+  satu.appendChild(fieldset);
+  
+  function tes(){
+    fieldset.appendChild(legend);
+  }
+  tes();
+  fieldset.style.color = 'red';
+  h3.style.color = 'blue';
+  
+  var orang = new Object();
+  orang.tampil = tampilkanObject;
+  function tampilkanObject(){
+      document.writeln(`<fieldset><legend><h3>Hello World</h3></legend></fieldset>`);
+  }
+  for(var i = 0; i < 5; i++){
+    orang.tampil();
+  }
+</script>
+</body>
+
+</html>
