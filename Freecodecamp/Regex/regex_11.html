@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//Pengelompokkan campuran karakter
+  let testStr = "Penguin";
+  let testRegex = /P(engu|umpk)in/;
+  let result = testRegex.test(testStr);
+  console.log(result);
+//jika stringnya di ganti 'pumpkin' ini jg akan 'true'
+
+  let myName = 'Helmi Soenardi';
+  let myRegex = /(Helmi|Jaedun)\ssoenardi/i;
+  let result1 = myRegex.test(myName);
+  console.log(result1);
+  console.log(myName.match(myRegex));
+  
+//Menggunakan kembali pola , pakai grup tangkap
+  let satu = 'row row row your boat';
+  let reRegex = /(\w+)\s\1/;
+  let hasil = reRegex.test(satu);
+  console.log(hasil);
+  console.log(satu.match(reRegex));
+  
+  let angka = '42 42 42 42';
+  let regexQu = /^(\d+) \1 \1 \1$/;
+  let hasil1 = angka.match(regexQu);
+  console.log(hasil1);
+  // ini ^ namanya carrot , dan pasangan nya $ , 
+</script>
+</body>
+
+</html>

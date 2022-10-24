@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>boleh ada boleh gk</title>
+</head>
+
+<body>
+<script>
+  // ? pada regex , menandakan bahwa karakter sebelumnya boleh ada boleh tdk 
+  let inggris = 'colour';
+  let usa = 'color';
+  let myRegex = /colou?r/;
+  let result1 = myRegex.test(inggris);
+  let result2 = myRegex.test(usa);
+  console.log(result1);
+  console.log(result2);
+//inggris & usa akan bernilai true , karna di regex ditulis 'u?', artinya boleh ada & gk ada 'U'
+
+
+//LOOKAHEADS
+  let password = "abc123";
+  let checkPass = /(?=\w{6,})(?=\D*\d{2})/g;
+  let result3 = checkPass.test(password);
+  console.log(result3);
+  console.log(password.match(checkPass));
+  
+  /*let str = 'astrounot123';
+  let pwRegex = /(\w{5,})(\D*\d{3,})/;
+  let result4 = str.match(pwRegex);
+  console.log(result4);
+  console.log(pwRegex.test(str));
+  // \D = [^0-9]    \w = [A-Za-z0-9_]
+  // \d = [0-9]   ()=ini utk menggrupping
+  
+  let qu = 'qu';
+  let regex1 = /q(?=u)/;
+//regex1 artinya , carikan huruf 'q' yg di ikuti setelah huruf 'u'*/
+</script> 
+</body>
+
+</html>

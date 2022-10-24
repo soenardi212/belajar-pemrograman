@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>memfilter match</title>
+</head>
+
+<body>
+<script>
+  // replace() , mencari pola kemudian menggantinya
+  let wrongText = "The sky is silver.";
+  let silverRegex = /silver/;
+  let result = wrongText.replace(silverRegex, "blue");
+  console.log(result);
+  //maksudnya = kita mencari kalimat silver , jika ketemu maka akan di ganti dgn kalimat blue
+  
+  //ini cth replace utk menukar posisi
+  let satu = 'Code Camp War';
+  let myRegex = /(\w+)\s(\w+)\s(\w+)/;
+  let replaceText = '$2 $3 $1';
+  let hasil = satu.replace(myRegex,replaceText);
+  console.log(hasil);//camp war code
+  
+  //hapus spasi awal & akhir
+  let str = ' Hello, World! ';
+  let rgx = /\s*(.*)\s\s+/g;
+  let akhir = str.replace(rgx, '$1');
+  console.log(akhir);
+  
+</script>
+</body>
+
+</html>
