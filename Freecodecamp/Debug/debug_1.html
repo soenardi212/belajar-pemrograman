@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>reduce</title>
+</head>
+
+<body>
+<script>
+//Debugging adalah proses menelusuri codingan kita utk menemukan masalah dan memperbaikinya
+
+//Reduce 
+  const myArr = [100,10,20,30];
+  myFunction = (satu,dua) => {
+    result = satu + dua;
+    return result;
+  }
+  console.log(myArr);
+  console.log(myArr.reduce (myFunction));
+
+//Reduce
+  const test = [100,20,30];
+  let total = test.reduce((tiga,empat) => tiga - empat);
+  console.log(`Ini adalah hasil dr pengurangan = ${total}`);
+  
+</script>
+</body>
+
+</html>

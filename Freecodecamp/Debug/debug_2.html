@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//cth jln pintas jika kita membuat string dgn kutip 1 dgn menggunakan karakter backslash
+  const test = 'I\'ve had a perfectly wonderful evening, but this wasn\'t it.';
+  console.log(test);
+ 
+ 
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let len = alphabet.length;
+  for (let i = 0; i <= len; i++) {
+    console.log(alphabet[i]);//a-undefined
+  }
+  for (let j = 1; j < len; j++) {
+    console.log(alphabet[j]);//b-z
+  }
+  
+  function satu() {
+    let testimon = [];
+  for (let k = 0; k < len; k++) {
+    let arr = alphabet[k];
+    testimon.push(arr);
+    //console.log(alphabet[k]);//a-z
+  }
+  return testimon.join(' ');
+  }
+  console.log(satu());
+</script>
+</body>
+
+</html>
