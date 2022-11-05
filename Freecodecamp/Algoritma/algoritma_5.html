@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>konfirmasi akhir</title>
+</head>
+
+<body>
+<script>
+//Periksa apakah string (argumen pertama, str) diakhiri dengan string target yang diberikan (argumen kedua, target).
+
+ const satu = 'Halo apa kabar dunia tipu';
+  console.log(satu.endsWith('ripu'));//false
+  
+ function confirmEnding(str,target) {
+   return str.endsWith(target);
+ }
+ console.log(confirmEnding('Helmi','mi'));//true
+ 
+ //substring() , ini mirip dgn method array yaitu slice().
+ const myStr = 'Mozilla';
+ console.log(myStr.substring(2));
+ console.log(myStr.substring(2,4));//zi
+ //nilai ke-1 = ingin di mulai dr index ke brp
+ //nilai ke-2 = ingin berakhir di element ke brp
+ 
+ //mengulang string 
+ function repeatStringNumTimes(str,num){
+   if(num < 0){
+     return '';
+   }
+   let myStr = '';
+   for(let i=0; i<num; i++) {
+     myStr += str;
+   }
+   return myStr;
+ }
+ //cara lain dr ini bisa menggunakan method.repeat()
+ console.log(repeatStringNumTimes('abc ',4));
+ 
+ //method fill()
+ const arr = [1,2,3,4,5,6];
+ console.log(arr.fill(8,4,6));
+ console.log(arr.fill(7,3));
+ console.log(arr.fill(9));
+ /*fill(value)
+   fill(value, start)
+   fill(value, start, end)*/
+</script>
+</body>
+
+</html>

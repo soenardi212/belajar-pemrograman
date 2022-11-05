@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//Mengubah huruf awal menjadi huruf Besar dan sisanya menjadi huruf kecil
+  function test(str) {
+    const myArr = str.split(' ');
+    let hasil = [];
+    for(let i=0; i<myArr.length;i++) {
+      hasil.push(myArr[i][0].toUpperCase() + myArr[i].substring(1).toLowerCase());
+    }
+    return hasil.join(' ');
+  }
+  console.log(test('helLo apA kabar dUnIa'));
+//toUpperCase = mengubah str jd hrf.Besar
+//toLowerCase = mengubah str jd hrf.kecil
+  
+  //ini cara ke-2
+  const titleCase = (str) => {
+    return str.split(' ').map(element => element[0].toUpperCase() + element.substring(1).toLowerCase()).join(' ');
+  }
+  console.log(titleCase('hari ini adalah hari sabtu'));
+  
+  
+  
+  //Nilai palsu dalam JavaScript adalah false, null, 0, "", undefined, dan NaN
+  function satu(arr) {
+    const newArr = [];
+    for(let i = 0; i < arr.length; i++) {
+      if(Boolean(arr[i]) === true) {
+        newArr.push(arr[i]);
+      }
+    }
+    return newArr;
+  }
+  console.log(satu([7,'','makan',null,false,9]));
+
+  //ini cara ke-2
+  const bouncer = (arr) => arr.filter(e => e);
+  console.log(bouncer(['',5,'Hello',0]));
+  
+</script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>spread op & rest op</title>
+</head>
+
+<body>
+<script>
+  //rest parameter & spread operator bisa utk array dan object
+  //cth spread operator
+  let namaBuah1 = ['apel','mangga'];
+  let namaBuah2 = ['sirsak', 'semangka'];
+  
+  let semuaNamaBuah = [...namaBuah1,...namaBuah2];
+  console.log(semuaNamaBuah);
+  
+  //cth rest parameter
+  function sum(x, y, z) {
+    return x + y + z;
+  }
+  const number = [1,2,3];
+  console.log(sum(...number));
+</script>
+</body>
+
+</html>

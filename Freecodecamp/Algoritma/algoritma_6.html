@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  //method find() 
+  const myArr = [1,5,130,9,15];
+  const found = myArr.find(element => element > 10);
+  console.log(found);//130
+  
+  function findElement(arr,func) {
+    let num = 0;
+    num = arr.find(func);
+    return num;
+  }
+  console.log(findElement([1,3,5,8,11], num => num % 2 === 0));
+  
+  //mengecek tipe data suatu value
+  function booWho(foo) {
+    if(typeof foo === 'boolean') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  console.log(booWho(false));//true
+  console.log(booWho('false'));//false
+ //mengapa false ke-1 mengembalikan true , karna dia boolean ,sdgkn yg ke-2 adalah string
+</script>
+</body>
+
+</html>
