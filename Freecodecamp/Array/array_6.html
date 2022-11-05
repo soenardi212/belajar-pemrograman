@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>indeks of & includes</title>
+</head>
+
+<body>
+<script>
+//Cara Mengecek ada/tdk nya suatu elemen pd array bisa dgn indexof atau includes
+  let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+  
+  console.log(fruits.indexOf('dates'));
+  console.log(fruits.indexOf('oranges'));
+  console.log(fruits.indexOf('pears'));
+  //penghitungan di mulai dr 0 
+  // -1 artinya elemen/data tdk ada
+  console.log(fruits.includes('pears',-1));//true
+  
+  test = (arr,elem) => {
+    return arr.indexOf(elem) === -1 ? false : true;
+  }
+  console.log(test(['nanas', 'duren', 'sawo'], 'jamur'));//false
+  
+  //latihan nested
+  let complexArray = [
+      [
+        {one: 1,two: 2},
+        {three: 3,four: 4}
+      ],
+      [
+        {a: "a",b: "b"},
+        {c: "c",d: "d"}
+      ]
+    ];
+  console.table(complexArray);
+  let empat = complexArray[0][0];
+  console.log(empat.one);
+</script>
+</body>
+
+</html>

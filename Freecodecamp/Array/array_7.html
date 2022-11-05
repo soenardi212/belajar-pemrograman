@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//mencari kedalaman level array
+// cth 1
+  let nestedArray = [
+    ['deep'],
+    [
+      ['deeper'], ['deepera']
+    ],
+    [
+      [
+        ['deepest'], ['deepestee']
+      ],
+      [
+        [
+          ['deepest-est?']
+        ]
+      ]
+    ]
+  ];
+  console.log(nestedArray[2][0][1]);
+  /*console.log(nestedArray[2][1][0][0][0]);
+  nestedArray[2][1][0][0][0] = 'deeper still';
+  console.log(nestedArray[2][1][0][0][0]);*/
+  
+  //cth 2
+  const myArr = [//kedalaman lev 1
+     ['lev 2',
+       ['lev 3',
+         ['lev 4',
+           ['lev 5',]//lev 5
+          ] 
+        ]
+      ]
+    ];
+    console.log(myArr);
+    console.log(myArr[0][1][1][1]);//lev-5
+    console.table(myArr);
+  //jgn lupa tambahkan , di akhir string apabila ingin menambah kedalaman lg
+  
+  function greaterThanTen(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > 10) {
+        newArr.push(arr[i]);
+      }
+    }
+    return newArr;
+  }
+  console.log(greaterThanTen([2, 12, 8, 14, 80, 0, 1])); //12 14 80
+  
+  const arr = [1,2,3,4,5];
+  arr.forEach(a => console.log(a));
+  //di cth ini tiap" arraynya kita anggap sbg a
+</script>
+</body>
+
+</html>
