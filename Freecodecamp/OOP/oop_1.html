@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//function konstraktor
+  function Burung(name,color) {
+    this.name = name;
+    this.color = color;
+    this.numLegs = 2;
+  }
+  let bird = new Burung('jaka','merah');
+  console.log(bird);
+//instansiasi adalah proses membuat object baru , dr cetakan object
+
+  
+//menambahkan method dgn cara ES6, pd obj literal
+  const kendaraan = {
+    nama: 'Toyota',
+    jumBan: 4,
+    sayName() {
+      return `Mobil ini bermerk ${this.nama} kijang`;
+    }
+  }
+  console.log(kendaraan.sayName());
+</script>
+</body>
+
+</html>

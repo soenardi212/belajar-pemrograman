@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//membuat property dgn prototype
+//jika kita ingin pakai nilai yg bisa di pakai berulang" maka gunakan protype
+function Dog(name,color) {
+  this.name = name,
+  this.color = color
+}
+
+Dog.prototype = {
+  constructor: Dog,
+  buntut : 1,
+  suara(){
+    return `guk-guk-guk`;
+  },
+  nama(){
+    return `Hello my name is ${this.name}`;
+  }
+}
+Dog.prototype.numLegs = 4;
+const helder = new Dog('Boy', 'Blue');
+console.log(helder);
+
+console.log(helder.numLegs);
+
+console.log(helder.nama());
+
+console.log(Dog.prototype.isPrototypeOf(helder)); //cara bacanya : apakah Dog merupakan prototype dr helder, jika benar maka hasilnya akan true
+</script>
+</body>
+
+</html>

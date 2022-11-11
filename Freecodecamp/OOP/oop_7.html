@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//Menimpa method yg di wariskan
+  function Bird() { }
+  
+  Bird.prototype.fly = function(){
+    return "I am flying!";
+  };
+  
+  function Penguin() { }
+  
+  Penguin.prototype = Object.create(Bird.prototype);
+  Penguin.prototype.constructor = Penguin;
+  
+  Penguin.prototype.fly = function() {
+    return 'Alas, this is a flightless bird';
+  }
+  let penguin = new Penguin();
+  console.log(penguin.fly());
+  
+//Mixin, Untuk objek yang tidak terkait, lebih baik menggunakan mixin.Mixin memungkinkan objek lain untuk menggunakan kumpulan fungsi.
+  let terbangMixin = function(obj) {
+    obj.terbang = function() {
+      console.log('Terbang, Wooosh!');
+    }
+  };
+  let burung = {
+    jenis: 'kenari',
+    warna: 'kuning'
+  };
+  let pesawat = {
+    type: 'Lion Air',
+    model: 456
+  };
+  terbangMixin(burung);
+  terbangMixin(pesawat);
+  
+  burung.terbang();
+  pesawat.terbang();
+</script>
+</body>
+
+</html>

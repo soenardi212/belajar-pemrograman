@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  function Animal () {}
+  function Bird () {}
+  function Dog () {}
+  
+  Bird.prototype = Object.create(Animal.prototype);
+  Dog.prototype = Object.create(Animal.prototype);
+  
+  //jika tdk pakai cara ini , maka duck & beagle adalah milik Animal
+  Bird.prototype.constructor = Bird;
+  Dog.prototype.constructor = Dog;
+  
+  Dog.prototype.bark = function() {
+    console.log('Woof!');
+  }
+  
+  let duck = new Bird();
+  let beagle = new Dog();
+  
+  //console.log(beagle.bark());
+  //console.log(beagle.constructor);
+</script>
+</body>
+
+</html>

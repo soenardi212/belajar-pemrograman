@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  function Bird(name) {
+    this.name = name
+  }
+  Bird.prototype.color = 'green';
+  const satu = new Bird('jalak');
+  console.log(satu.color);
+  
+  Bird.prototype.isPrototypeOf(satu);//true
+  //ini di sebut rantaim
+  console.log(Object.prototype.isPrototypeOf(Bird.prototype));//true
+  
+  //supertype
+  function Vario(warna) {
+    this.warna = warna;
+  }
+  Vario.prototype = {
+    constructor: Vario,
+    /*bbm = function() {
+    console.log('Bahan bakar motor adalah bensin');
+    }*/
+  }
+  
+  function Beat(warna) {
+    this.warna = warna;
+  }
+  Beat.prototype = {
+    constructor: Beat,
+    /*bbm = function() {
+      console.log('Bahan bakar motor adalah bensin');
+    }*/
+  }
+  
+  function Motor() { }
+  
+  Motor.prototype = {
+    constructor: Motor,
+    bbm () {
+      return 'Bahan bakar motor adalah bensin';
+    }
+  }
+  let jupiter = Object.create(Motor.prototype);
+  console.log(jupiter.bbm());
+  
+</script>
+</body>
+
+</html>

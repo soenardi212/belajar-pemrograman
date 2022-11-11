@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//membuat obj dgn function konstraktor harus selalu ada keyword this.
+//ini disebutnya class nya
+  function Bird(name,color) {
+    this.name = name,
+    this.color = color,
+    this.numLegs = 2
+  }
+const burung = new Bird('murai','hitam');
+console.log(burung);
+console.log(burung.constructor === Bird);
+console.log(burung instanceof Bird);//true
+//instanceof di gunakan utk mengecek apakah dia obj konstraktor atau bukan
+
+//own property & prototype property
+function Unggas(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+Unggas.prototype.warna = 'hijau';
+
+let duck = new Unggas("Donald");
+let canary = new Unggas("Tweety");
+
+let ownProps = [];
+let prototypeProps = [];
+
+for (let property in duck) {
+  if (duck.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else{
+    prototypeProps.push(property);
+  }
+}
+
+console.log(ownProps);
+console.log(prototypeProps);
+console.log(duck.warna);
+</script>
+</body>
+
+</html>

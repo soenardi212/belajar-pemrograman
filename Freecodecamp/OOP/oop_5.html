@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>object.create</title>
+</head>
+
+<body>
+<script>
+//ini di sbt kelas parent/induknya
+  function Motor() {}
+  
+  Motor.prototype = {
+    constructor: Motor,
+    bbm() {
+      return 'Bahan bakar motor adalah bensin';
+    }
+  }
+  //ini cara ke-1 utk menghubungkan ke induknya
+  let jupiter = Object.create(Motor.prototype);
+  console.log(jupiter.bbm());
+ 
+  //ini cara ke-2
+  Motor.prototype.eat = function() {
+    console.log('selamat makan');
+  };
+  let nmax = Object.create(Motor.prototype);
+  nmax.eat();
+  
+  //ini cara ke-3 & cara menghubungkan ke induknya
+  let supra = Object.create(Motor.prototype);
+  console.log(supra.bbm());
+  
+  //ini di sbt child/anaknya
+  function Mio () {}
+  Mio.prototype = Object.create(Motor.prototype);
+  let fino = new Mio();
+  console.log(fino.bbm());
+  
+</script>
+</body>
+
+</html>
