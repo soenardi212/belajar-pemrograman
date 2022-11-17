@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pengelolaan angkot dgn objek</title>
+</head>
+
+<body>
+<script>
+// Latihan object menggunakan function cunstraktor
+// khusus function cunstraktor , nama awal harus diawali huruf BESAR
+
+function Angkot(sopir,trayek,penumpang,kas){
+  this.sopir = sopir;
+  this.trayek = trayek;
+  this.penumpang = penumpang;
+  this.kas = kas;
+  
+  this.penumpangNaik = function(namaPenumpang){
+    this.penumpang.push(namaPenumpang);
+    return this.penumpang;
+  }
+}
+var angkot1 = new Angkot('helmi',['cicahem','cibiru'],[],0);
+
+var angkot2 = new Angkot('jhon doe',['tamkot','asem'],[],0);
+
+</script>
+</body>
+
+</html>

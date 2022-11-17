@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cth object literal</title>
+</head>
+
+<body>
+<script>
+    const person ={
+    "nama lengkap" : "helmi sunardi",
+      alamat : "indonesia",
+      umur : "27",
+    };
+ //ubah property/attribute
+    
+    //person["nama"] = "helmi";
+    //person["alamat"] = "indonesia";
+    //person["umur"] = 30;
+    
+    console.info(`nama : ${person["nama lengkap"]}`); //gunakan kurung kotak apabila katanya lebih dr 1 utk mengakses propertinya
+    console.info(`alamat : ${person.alamat}`);
+    console.info(`umur : ${person.umur}`);
+    
+    console.table(person);
+    
+    delete person["umur"];
+    console.table(person);
+    
+  </script>
+</body>
+
+</html>
