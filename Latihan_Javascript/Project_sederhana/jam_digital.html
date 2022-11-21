@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script>
+    window.onload = function() { jam(); };
+  
+    function jam() {
+      let a = document.getElementById('jam'),
+      //console.log(Date());
+      satu = new Date(), h, m, s;
+      h = satu.getHours();
+      m = set(satu.getMinutes());
+      s = set(satu.getSeconds());
+      const waktu = `${h}:${m}:${s}`;
+      a.innerHTML = waktu;
+  
+      setTimeout('jam()', 1000);
+    };
+  
+    function set(a) {
+      a = a < 10 ? '0' + a : a;
+      return a;
+    };
+    
+    </script>
+</head>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  @font-face {
+    font-family: "Font Digital";
+    src: url('digital-7.ttf');
+  }
+  #jam {
+    font-family: "Font Digital";
+    font-size: 170px;
+    /*text-align: center;*/
+    background-color: orangered;
+    color: white;
+    height: 200px;
+    padding: 40px 0 10px 110px;
+    /*padding: 15px 0 10px 0;*/
+  }
+
+</style>
+<body>
+<div id="jam"></div>
+<script>
+  const teks1 = `
+░░░░░██╗░█████╗░███╗░░░███╗
+░░░░░██║██╔══██╗████╗░████║
+░░░░░██║███████║██╔████╔██║
+██╗░░██║██╔══██║██║╚██╔╝██║
+╚█████╔╝██║░░██║██║░╚═╝░██║
+░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝`;
+  
+  const teks2 = `
+██████╗░██╗░██████╗░██╗████████╗░█████╗░██╗░░░░░
+██╔══██╗██║██╔════╝░██║╚══██╔══╝██╔══██╗██║░░░░░
+██║░░██║██║██║░░██╗░██║░░░██║░░░███████║██║░░░░░
+██║░░██║██║██║░░╚██╗██║░░░██║░░░██╔══██║██║░░░░░
+██████╔╝██║╚██████╔╝██║░░░██║░░░██║░░██║███████╗
+╚═════╝░╚═╝░╚═════╝░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚══════╝`;
+  
+  console.log('%c'+teks1,'color:green;')
+  console.log('%c'+teks2,'color:green;')
+</script>
+</body>
+
+</html>
