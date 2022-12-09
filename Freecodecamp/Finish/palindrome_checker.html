@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  function palindrome(str) {
+    str = str.replace(/\W|_/g, "").toLowerCase();
+    let reverse = str.split('').reverse().join('');
+    if(str === reverse) return true;
+    return false;
+  }
+  console.log(palindrome('eye)*&^(*&%_^'));
+  
+function myNum(num) {
+  const nomer = num.match(/\d{4}/).join('');
+  if(nomer == 6285) {
+    alert('ini no indosat');
+  } else if(nomer == 0857) {
+    alert('ini no indosat');
+  } else {
+    alert('no tdk di kenal');
+  }
+  return nomer;
+}
+//console.log(myNum('6285654321'));
+
+function tes(angka) {
+  return angka.match(/\d{3}\W\d{4}/);
+}
+console.log(tes('987654321-987654321'));
+</script>
+</body>
+
+</html>

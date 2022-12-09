@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+function teleponCheck(str) {
+  let regex = /^1?\s?(\d{3}|\(\d{3}\))-?\s?\d{3}-?\s?\d{4}$/gm;
+  return regex.test(str);
+}
+console.log(teleponCheck('555-555-5555'));
+
+function noIndo(str) {
+  //let num = /628|08\d/g;
+  str = str.split('');
+  a = str[0];
+  b = str[1];
+  c = str[2];
+  d = str[3];
+  let e = a+b+c+d;
+  if(d == 0857 || 6285) {
+    alert('ini no indosat');
+  }
+ /* if(str[0] == 0||6 && str[1] == 8||2 && str[2] == 5||8) {
+    alert('ini no indosat');
+  }*/ else {
+    alert('no tdk di kenal');
+  }
+ // return num.test(str);
+ return str
+}
+console.log(noIndo('62877364'));
+
+const arr = [1,2,3,4,5,6,7,8,9];
+console.log(arr.splice(0,3));
+</script>
+
+</body>
+
+</html>
