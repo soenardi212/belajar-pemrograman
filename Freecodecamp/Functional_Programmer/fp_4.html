@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  //cara" output dgn 'MAP()'
+  const users = [
+    { Name: 'John', age: 34, color: 'white' },
+    { Name: 'Amy', age: 20, color: 'blue' },
+    { Name: 'camperCat', age: 10, color: 'red' }
+  ];
+  const result1 = users.map((elemen) => ({nama: elemen.Name, warna: elemen.color}));
+  console.log(JSON.stringify(result1));
+  
+  //mengembalikan daftar object
+  const result2 = users.map((z => z));
+  console.log(result2);
+
+  //mengembalikan object yg kita inginkan
+  const names = users.map(elemen => 
+  elemen.Name+'-'+elemen.color);
+  console.log(names);
+  
+  const warna = users.map(x => x.color);
+  console.log(warna);
+  //console.log(warna[1]);
+  
+  const array1 = [1, 4, 9, 16];
+  // pass a function to map
+  const map1 = array1.map(x => x * 2);
+  console.log(map1);//2,8,18,32
+</script>
+</body>
+
+</html>

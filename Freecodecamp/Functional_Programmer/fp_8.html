@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>every & some</title>
+</head>
+
+<body>
+<script>
+  //every(), Metode everyini bekerja dengan array untuk memeriksa apakah setiap elemen lolos dari pengujian tertentu
+  //Ini mengembalikan nilai Boolean true jika semua nilai memenuhi kriteria, false jika tidak.
+  const myArr = [1,2,6,4,9];
+  console.log(myArr.every(function(abc) {
+    return abc < 10;
+  }));//true
+  
+  //jika di isi angka positif semua maka akan true
+  function satu (val) {
+    /*return val.every(function(a) {
+      return a > 0;
+    });*/
+    return val.every((a) => a > 0);
+  };
+  console.log(satu([1,2,3,-4,5]));//false
+  
+  //some() , Metode someini bekerja dengan array untuk memeriksa apakah ada elemen yang lulus tes tertentu. Ini mengembalikan nilai Boolean - truejika ada nilai yang memenuhi kriteria, falsejika tidak.
+  const numbers = [10, 50, 8, 220, 110, 11];
+  console.log(
+  numbers.some(function(currentValue) {
+    return currentValue < 10;
+  }));//true
+  
+  //closure
+  function add(x) {
+    return function add1(y) {
+      return function add2(z,o) {
+        return x + y + z + o;
+      }
+    }
+  }
+   console.log(add(5)(10)(15,20));
+</script>
+</body>
+
+</html>

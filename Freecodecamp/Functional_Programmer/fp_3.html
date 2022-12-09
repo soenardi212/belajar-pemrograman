@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//menghindari mutasi / perubahan nilai var global
+  const nilaiTetap = 5;
+  function increment(value) {
+    return ++value;
+  }
+  console.log(increment(nilaiTetap));
+  
+  const listPelajaran = ['Agama','MTK','IPA','PLKJ','Inggris'];
+  //ini cara menambahkannya
+  function add(listPelajaran,namaPelajaran) {
+  const newPelajaran = [...listPelajaran];
+    newPelajaran.push(namaPelajaran);
+    return newPelajaran;
+    /*cara spt ini jg bisa
+  return [...listPelajaran,namaPelajaran];
+    */
+  }
+  const namaPelajaranBaru = add(listPelajaran,'Seni_Budaya');
+  console.log(namaPelajaranBaru);
+  
+  //ini cara menghapusnya
+  function remove(listPelajaran, namaPelajaran) {
+  //const newPelajaran = [...listPelajaran];
+  const newPelajaran = [...namaPelajaranBaru];
+  const indexPelajaran = newPelajaran.indexOf(namaPelajaran);
+  if(indexPelajaran >= 0) {
+    newPelajaran.splice(indexPelajaran, 1);
+    return newPelajaran;
+   }
+  }
+  const hapusPelajaran = remove(listPelajaran,'PLKJ');
+  console.log(hapusPelajaran);
+  
+</script>
+</body>
+
+</html>

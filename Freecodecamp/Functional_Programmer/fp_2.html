@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//callback
+  const profil = (name) => alert(`Hello ${name}`);
+  const inputNama = (callback) => {
+    const one = prompt('silakan masukkan nama anda');
+    callback(one);
+  }
+  inputNama(profil);
+
+//callback , fungsi yg parameternya berisi fungsi
+  const teh_Hijau = () => 'Green Tea';
+  const teh_Hitam = () => 'Black Tea';
+  
+  const proses = (persiapanTeh, numTeh) => {
+    const result = [];
+    for (let teh1 = 1; teh1 <= numTeh; teh1++) {
+      const tehCup = persiapanTeh();
+      result.push(tehCup);
+    }
+    return result;
+  };
+  
+  const tea4GreenTea = proses(teh_Hijau, 10);
+  const tea4BlackTea = proses(teh_Hitam, 15);
+  console.log(tea4BlackTea, tea4GreenTea);
+  
+</script> 
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+<script>
+  //Reduce() , redius menerima 2 parameter
+  //1.akumulator = nilai yg akan selalu berubah
+  //2.currentValue = nilai yg sdg kita looping
+  //3.kita harus memberi nilai awal akumulator , di sni 0 adalah nilai awal akumulator
+  const nilai = [1,2,3,4];//ini currentVal
+  const result = nilai.reduce((acc,curr) => acc+curr,0);
+  console.log(result);//10
+  
+  const dataKeluarga = [
+    {name: 'Helmi', umur: 27},
+    {name: 'Dedi', umur: 32},
+    {name: 'Nova', umur:24}
+    ];
+    const hasil = dataKeluarga.reduce((sum,user) => sum+user.umur,0);
+    console.log(hasil);
+    
+    const usersObj = dataKeluarga.reduce((obj, user) => {
+      obj[user.name] = user.umur;
+      return obj;
+    }, {});
+    console.log(usersObj);
+</script>
+</body>
+
+</html>

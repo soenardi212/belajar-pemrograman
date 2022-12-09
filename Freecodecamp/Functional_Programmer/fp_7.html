@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  //sort()
+  function sortir(arr) {
+    return arr.sort();
+  }
+  console.log(sortir(['q','w','e','r']));
+  console.log(sortir([4,1,9,3,7,10]));
+  
+  //di sini 10 akan menjadi bil besar dr 9
+  const angka = [17,3,9,2,10,];
+  function test(arr1) {
+    return angka.map((el => el)).sort((a, b) => a-b);
+  }
+  console.log(test(angka));
+  
+  //kolaborasi split() & regex;
+  function satu(str) {
+    return str.split(/\W/);
+  }
+  console.log(satu('Hello world,i-am code'));
+  
+  // \W adalah regex
+  function tes123(myStr) {
+    return myStr.split(/\W/).join(' ');
+  }
+  console.log(tes123('Hello-bagaimana-kabarmu-hari-ini'));
+  
+  function tes456(str) {
+    const slug = str.split(' ')
+    .filter(kata => kata !== '')
+    .map(world => world.toLowerCase())
+    .join('-');
+    return slug;
+  }
+  console.log(tes456(' Hello BaGaiManA kABarmu hari ini '));
+</script>
+</body>
+
+</html>

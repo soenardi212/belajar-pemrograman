@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  ul li{
+    display: inline-block;
+    background-color: red;
+    color: white;
+  }
+  li{
+    margin: 5px 15px;
+  }
+</style>
+<body>
+  
+  <ul>
+    <li>home</li>
+    <li>product</li>
+    <li>services</li>
+    <li>contact</li>
+  </ul>
+  
+<script>
+  const prepareTea = () => 'green tea';
+ 
+  const getTea = (numOfCups) => {
+    const teaCups = [];
+    for(let i = 0; i < numOfCups; i++) {
+      const teaCup = prepareTea();
+      teaCups.push(teaCup);
+    }
+    return teaCups;
+  }
+  const satu = getTea(5);
+  console.log(satu);
+  
+  
+  const hasil1 = (numb) => {
+    let var2 = [];
+    for(let z = 5; z >= numb; z--) {
+      for(let x = 1; x <= z; x++) {
+        //var2 += x;
+        var2.push(x);
+      }
+      var2.push('\n');
+    }
+    return var2.join('');
+  }
+  
+  const hasil2 = (angka) => {
+    let var1 = '';
+    for(let a = 1; a <= angka; a++) {
+      for(let u = 1; u <= a; u++) {
+        var1 += u;
+      }
+     var1 += '\n';
+    } 
+   return var1;
+  }
+  console.log(hasil1(1)+hasil2(5));
+  //console.log(hasil2(5));
+</script>
+</body>
+
+</html>

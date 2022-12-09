@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+//menggabungkan filter & map
+  const daftarBand = [
+    {band: 'Peterpan',
+      personil: 5,
+       lahir: 2010,
+        vokalis: 'Aril',
+          rating: '9,8',
+            logo: 'sayap'
+     },
+     {band: 'Dewa19',
+       personil: 5,
+         lahir: 2007,
+           vokalis: 'Aril',
+             rating: '9,8',
+               logo: 'sayap'
+     },
+     {band: 'Noah',
+       personil: 1,
+         lahir: 2005,
+           vokalis: 'Aril',
+             rating: '9,8',
+               logo: 'sayap'
+     },
+     {band: 'Linkin park',
+       personil: 5,
+        lahir: 2015,
+          vokalis: 'Aril',
+            rating: '9,8',
+              logo: 'sayap'
+     },
+     {band: 'Vierra',
+       personil: 5,
+         lahir: 2008,
+           vokalis: 'Aril',
+             rating: '9,8',
+               logo: 'sayap'
+     }
+    ];
+    //ini di filter dulu baru di map , jika di map dulu jg bisa trs di filter
+   //Number() adalah tag baru di es6
+    const list = daftarBand.filter(el => Number(el.lahir) < 2010).map(el => ({nama: el.band, rilis: el.lahir}));
+  
+    console.log(JSON.stringify(list));
+  //  console.log(list);
+  
+  
+  //Menggabungkan array dgn concat , ini jg berlaku utk string
+    myArr = (arr1, arr2) => arr1.concat(arr2);
+    const first = [1,2];
+    const second = [3,4,5];
+    console.log(myArr(first,second));
+</script>
+</body>
+
+</html>
