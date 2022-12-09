@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  function tes(collection, source) {
+    const keys = Object.keys(source);
+    let result = 0;
+  
+    collection.forEach((obj) => {
+      if(obj[keys] === source[keys]) {
+       // console.log(obj)
+       result = obj;
+      }
+    });
+    return result;
+  }
+  console.log(
+    tes(
+    [
+     { first: "Romeo", last: "Montague" },
+     { first: "Mercutio", last: null },
+     { first: "Tybalt", last: "Capulet" }
+    ], 
+     { last: "Montague"})
+  );
+  
+  function lokal(koleksi, sourse) {
+    const keyss = Object.keys(sourse);
+    let hasil = [];
+    koleksi.forEach((el) => {
+      let temp = [];
+      keyss.forEach((key) => {
+        if(el[key] === sourse[key]) {
+          temp.push(el);
+        }
+      });
+      if(temp.length >= keyss.length) {
+        hasil.push(el);
+      }
+    });
+    return hasil;
+  }
+  console.log(lokal([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }));
+</script> 
+
+</body>
+
+</html>

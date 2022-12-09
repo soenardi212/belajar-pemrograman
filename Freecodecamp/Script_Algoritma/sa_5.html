@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  function myReplace(str, before, after) {
+    if(before[0] === after[0].toUpperCase()) {
+     after =  after[0].toUpperCase() + after.slice(1);
+     return after;
+    } else {
+      return str.replace(before, after.toLowerCase());
+    }
+  }
+  console.log(myReplace('A quick brown fox Jumped over the lazy dog', 'jumped',  'leopard'));
+  //toLowerCase == [a-z]
+  //toUpperCase == [A-Z]
+  
+  //Pasangan DNA
+  const pairElement = (str) => {
+    const pair = {
+      G: 'C',
+      C: 'G',
+      T: 'A',
+      A: 'T'
+    };
+    return str.split('').map((el) => [el, pair[el]]);
+  }
+  console.log(pairElement('GCG'));
+//[['G', 'C'],['C', 'G'],['G', 'C']]
+</script>
+</body>
+
+</html>

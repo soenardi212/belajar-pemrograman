@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  function satu(str) {
+    return str
+    .replace(/[\s_]/g, '-')
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .toLowerCase();
+  }
+  console.log(satu('ThisIsSpinalTap'));
+//console.log(satu('This_Is_Spinal_Tap'));
+
+  //pig latin
+  function translatePigLatin(str) {
+    if(str[0].match(/^[aiueo]/)) {
+      return str + 'way';
+    } else {
+      return str.replace(/([^aiueo]+)(\w*)/, '$2$1ay');
+    }
+  }
+  console.log(translatePigLatin('paragraphs'));
+  console.log(translatePigLatin('glove'));
+  //onsonnantcay
+  console.log(translatePigLatin('california'));
+  console.log(translatePigLatin('rhythm'));
+</script>
+</body>
+
+</html>

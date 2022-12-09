@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  //huruf yg hilang
+  const fearNotLetter = (str) => {
+    for(let i = 0; i < str.length; i++) {
+      let code = str.charCodeAt(i);
+      if(code !== str.charCodeAt(0) + i) {
+        return String.fromCharCode(code -1);
+      }
+    }
+    return undefined;
+  };
+  console.log(fearNotLetter('vxyz'));
+  
+//serikat yg di urutkan
+  function uniteUnique(arr) {
+    return [...new Set(arr.concat(...arguments))];
+  }
+  console.log(uniteUnique([1,3,2],[5,2,1,4],[2,1]));//[1,3,2,5,4]
+  
+  function satu(ar1,ar2,ar3) {
+    //return [ar1,ar2,ar3];
+    return arguments;
+  }
+  console.log(satu([9,8,7],[6,5,4],[3,2,1]));
+  //arguments adalah sudo parameter
+</script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  //Droop It
+  function droopElement(arr, func) {
+    while (!func(arr[0])) {
+      arr.shift();
+    }
+    return arr;
+  }
+  console.log(droopElement([1,2,3,7,4], 
+  function(n) {
+    return n > 3;
+    })
+  );
+  
+  
+//Steam roller
+  function steamrollArray(ar, result = []) {
+    //return array.flat(Infinity);
+    for(let i = 0; i < ar.length; i++) {
+      if(Array.isArray(ar[i])) {
+        steamrollArray(ar[i], result);
+      } else {
+        result.push(ar[i]);
+      }
+    }
+    return result;
+  }
+  /*console.log(steamrollArray
+  ([1,[2],[3,[[4]]]]));*/
+  console.log(steamrollArray
+  ([[['a']],[['b']]]));
+  
+  
+//Agen Binary
+  function binner(str) {
+    str = str.split(' ');
+    const answer = [];
+    for(let element of str) {
+      answer.push(String.fromCharCode(parseInt(element, 2)));
+    }
+    return answer.join('');
+  }
+  console.log(binner("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
+</script>
+</body>
+
+</html>
