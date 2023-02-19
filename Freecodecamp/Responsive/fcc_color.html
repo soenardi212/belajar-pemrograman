@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn css color</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container{
+      background-color: rgb(0, 0, 0);
+      padding: 10px 0;
+    }
+    h1{
+      text-align: center;
+      background-color: rgb(150, 127, 0);
+    }
+    .marker{
+      height: 25px;
+      width: 200px;
+      margin: 15px auto;
+    }
+    .one{
+      background-color: rgb(127, 200, 0);
+    /*di dlm rgb nilai 255 = 100%
+    rgb = red, green, blue*/
+      box-shadow: 0 0 10px 5px rgb(127, 200, 0);
+    /*box-shadow: sumbu-X, sumbu-Y, blur Radius, spread Radius, warna; 
+    X = kiri-kanan, Y = atas-bawah*/
+    }
+    .two{
+    /*hesadesimal*/
+    background-color: #ff0045;
+    box-shadow: 0 0 0 5px darkgoldenrod;
+    }
+    .three{
+      /*hsl*/
+      /*hsl(223, 59%, 31%, 0.8)*/
+    background-color: hsl(240, 100%, 50%);
+    }
+    .four{
+      background:linear-gradient(150deg,
+      rgb(122, 74, 14) 0%,
+      rgb(0, 0, 255) 50%,
+      rgb(0, 175, 0) 100%);
+    /*linear-gradient menerima byk argument, min 2 argument
+    arg 1 = arah dr kiri ke kanan(brp-deg)
+    arg 2 & 3 warna pilihan, kita bisa pakai nama warna / rgb / hsl / hex*/
+    }
+    .sleeve{
+      height: 25px;
+      width: 110px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-left: 10px double rgba(0, 0, 0, 0.75);
+  /*rgba(redValue, greenValue, blueValue, alphaValue) alpha == opacity*/
+    }
+    .cap{
+      width: 60px;
+      height: 25px;
+    }
+    .cap, .sleeve{
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+<h1>CSS Color Markers</h1>
+<div class="container">
+  <div class="marker one">
+    <div class="cap"></div>
+    <div class="sleeve"></div>
+      </div>
+  <div class="marker two"></div>
+  <div class="marker three"></div>
+  <div class="marker four"></div>
+</div>
+
+<script>
+var satu = 'Hello world';
+
+function dua(){
+  return <h1>satu</h1>;
+}
+console.log(dua());
+</script>
+</body>
+
+</html>

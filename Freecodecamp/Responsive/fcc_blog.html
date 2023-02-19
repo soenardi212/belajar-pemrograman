@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    main{
+      /*position: absolute;*/
+    }
+    .awal{
+      text-transform: capitalize;
+      float: left;
+      position: fixed;
+      /*min-width: 30%;
+      display: block;*/
+    }
+    header{
+      /*color: ;*/
+      padding: auto;
+      text-indent: 30px;
+    }
+    .head{
+      padding: 20px 0;
+    }
+    ul li[class="satu"]{
+     border-top: 1px solid black; 
+     list-style: none;
+     padding: 10px 15px 10px 0;
+     /*padding-left: 35px;*/
+    }
+    a{
+      text-decoration: none;
+      display: block;
+      color: black;
+    }
+    #container{
+      width: 700px;
+      padding: 15px;
+      position: absolute;
+      left: 275px;
+     /* top: 0;
+      background-color: lightblue;*/
+      overflow: hidden;
+      border-left: 1px solid black;
+    }
+    div > h2{
+      margin-bottom: 15px;
+    }
+    p{
+      padding-left: 15px;
+      margin-bottom: 15px;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+    ul li:not(.satu){
+     margin-left: 80px;
+     margin-bottom: 15px;
+     /*background-color:red;*/
+     font-size: 18px;
+    }
+    .kode{
+      background-color: wheat;
+      position:relative;
+      margin: 15px 40px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    
+    @media (max-width: 768px){
+      /*ukuran hp*/
+      .satu{
+        
+      }
+      #container{
+        background-color: green;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<main id="main-doc">
+  <div class="awal">
+  <nav id="navbar">
+    <header>
+      <h1 class="head">JS Documentation</h1>
+      <ul>
+      <li class="satu"><a href="#one" class="nav-link">Pengantar</a></li>
+      <li class="satu"><a href="#two" class="nav-link">Apa yang harus anda ketahui</a></li>
+      <li class="satu"><a href="#three" class="nav-link">JavaScript dan Java</a></li>
+      <li class="satu"><a href="#four" class="nav-link">Halo dunia</a></li>
+      <li class="satu"><a href="#five" class="nav-link">Variabel</a></li>
+      <li class="satu"><a href="#six" class="nav-link">Mendeklarasikan variabel</a></li>
+      <li class="satu"><a href="#seven" class="nav-link">Lingkup variabel</a></li>
+      <li class="satu"><a href="#eight" class="nav-link">Variabel global</a></li>
+      <li class="satu"><a href="#nine" class="nav-link">Konstanta</a></li>
+      <li class="satu"><a href="#ten" class="nav-link">Tipe data</a></li>
+      <li class="satu"><a href="" class="nav-link">Pernyataan if...else</a></li>
+      <li class="satu"><a href="" class="nav-link">Sedangkan pernyataan</a></li>
+      <li class="satu"><a href="" class="nav-link">Deklarasi fungsi</a></li>
+      <li class="satu"><a href="" class="nav-link">Referensi</a></li>
+      </ul>
+    </header>
+  </nav>
+  </div>
+  
+  <div id="container">
+    <div id="one">
+    <h2>Pengantar</h2>
+    <p>JavaScript adalah bahasa scripting lintas-platform, berorientasi objek. Ini adalah bahasa yang kecil dan ringan. Di dalam lingkungan host (misalnya, browser web), JavaScript dapat dihubungkan ke objek di lingkungannya untuk menyediakan kontrol terprogram terhadapnya.</p>
+    
+    <p>JavaScript berisi pustaka objek standar, seperti Array, Tanggal, dan Matematika, dan kumpulan inti elemen bahasa seperti operator, struktur kontrol, dan pernyataan. JavaScript inti dapat diperluas untuk berbagai tujuan dengan melengkapinya dengan objek tambahan; Misalnya:</p>
+    <ul>
+      <li>JavaScript sisi klien memperluas bahasa inti dengan menyediakan objek untuk mengontrol browser dan Document Object Model (DOM). Misalnya, ekstensi sisi klien memungkinkan aplikasi untuk menempatkan elemen pada formulir HTML dan merespons peristiwa pengguna seperti klik mouse, masukan formulir, dan navigasi halaman.</li>
+      
+      <li>JavaScript sisi server memperluas bahasa inti dengan menyediakan objek yang relevan untuk menjalankan JavaScript di server. Misalnya, ekstensi sisi server memungkinkan aplikasi untuk berkomunikasi dengan database, memberikan kontinuitas informasi dari satu pemanggilan ke aplikasi lainnya, atau melakukan manipulasi file di server.</li>
+    </ul>
+    </div>
+    <div id="two">
+    <h2>Apa Yang Harus Anda Ketahui</h2>
+    <p>Panduan ini menganggap Anda memiliki latar belakang dasar berikut:</p>
+    <ul>
+      <li>Pemahaman umum tentang Internet dan World Wide Web (WWW).</li>
+      <li>Pengetahuan kerja yang baik tentang HyperText Markup Language (HTML).</li>
+      <li>Beberapa pengalaman pemrograman. Jika Anda baru dalam pemrograman, cobalah salah satu tutorial yang ditautkan di halaman utama tentang JavaScript.</li>
+    </ul>
+    </div>
+    <div id="three">
+      <h2>JavaScript dan Java</h2>
+      <p>JavaScript dan Java serupa dalam beberapa hal tetapi secara fundamental berbeda dalam beberapa hal lainnya. Bahasa JavaScript menyerupai Java tetapi tidak memiliki pengetikan statis Java dan pengecekan tipe yang kuat. JavaScript mengikuti sebagian besar sintaks ekspresi Java, konvensi penamaan, dan konstruksi alur kontrol dasar yang merupakan alasan mengapa namanya diganti dari LiveScript ke JavaScript.</p>
+      <p>Berbeda dengan sistem kelas waktu kompilasi Java yang dibuat dengan deklarasi, JavaScript mendukung sistem waktu proses berdasarkan sejumlah kecil tipe data yang mewakili nilai numerik, Boolean, dan string. JavaScript memiliki model objek berbasis prototipe daripada model objek berbasis kelas yang lebih umum. Model berbasis prototipe menyediakan pewarisan dinamis; yaitu, apa yang diwariskan dapat bervariasi untuk masing-masing objek. JavaScript juga mendukung fungsi tanpa persyaratan deklaratif khusus. Fungsi dapat menjadi properti objek, mengeksekusi sebagai metode yang diketik secara longgar</p>
+      <p>JavaScript adalah bahasa bentuk yang sangat bebas dibandingkan dengan Java. Anda tidak harus mendeklarasikan semua variabel, kelas, dan metode. Anda tidak perlu memikirkan apakah metode bersifat publik, pribadi, atau dilindungi, dan Anda tidak perlu mengimplementasikan antarmuka. Variabel, parameter, dan tipe pengembalian fungsi tidak diketik secara eksplisit.</p>
+    </div>
+    <div id="four">
+      <h2>Halo Dunia</h2>
+      <p>Untuk mulai menulis JavaScript, buka Scratchpad dan tulis kode JavaScript "Halo dunia" pertama Anda:</p>
+      <p class="kode">function greetMe(yourName) { alert("Hello " + yourName); }
+      greetMe("World");</p>
+      <p>Pilih kode di pad dan tekan Ctrl+R untuk melihatnya terbuka di browser Anda!</p>
+    </div>
+    <div id="five">
+      <h2>Variabel</h2>
+      <p>Anda menggunakan variabel sebagai nama simbolis untuk nilai dalam aplikasi Anda. Nama-nama variabel, yang disebut pengidentifikasi, sesuai dengan aturan tertentu</p>
+      <p>Pengidentifikasi JavaScript harus dimulai dengan huruf, garis bawah (_), atau tanda dolar ($); karakter selanjutnya juga bisa berupa angka (0-9). Karena JavaScript peka terhadap huruf besar/kecil, huruf menyertakan karakter "A" hingga "Z" (huruf besar) dan karakter "a" hingga "z" (huruf kecil).</p>
+      <p>Anda dapat menggunakan huruf ISO 8859-1 atau Unicode seperti å dan ü dalam pengidentifikasi. Anda juga dapat menggunakan urutan pelolosan Unicode sebagai karakter dalam pengidentifikasi. Beberapa contoh nama resmi adalah Number_hits, temp99, dan _name.</p>
+    </div>
+    <div id="six">
+      <h2>Mendeklarasikan variabel</h2>
+      <p>Anda dapat mendeklarasikan variabel dengan tiga cara:</p>
+      <p>Dengan kata kunci var. Misalnya,</p>
+      <p class="kode">var x = 42.</p>
+      <p>sintaks ini dapat digunakan untuk mendeklarasikan variabel lokal dan global.</p>
+      <p>Dengan hanya memberikan nilai. Misalnya,</p>
+      <p class="kode">x = 42</p>
+      <p>Ini selalu mendeklarasikan variabel global. Ini menghasilkan peringatan JavaScript yang ketat. Anda sebaiknya tidak menggunakan varian ini.</p>
+      <p>Dengan kata kunci biarkan. Misalnya,</p>
+      <p class="kode">let y = 23</p>
+    </div>
+  </div>
+  
+</main>
+</body>
+
+</html>

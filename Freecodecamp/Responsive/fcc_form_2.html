@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Survey</title>
+  <style>
+    /*body{
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      font-size: 16px;
+      background-image: url(img_3.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 10px 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }*/
+    *{
+      margin: 0;
+    }
+    .container{
+      height: 100vh;
+      width: 100vw;
+      background: -webkit-linear-gradient(top, #b92b27, #1565c0);
+    /*background-image: url(img_3.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;*/
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      /*justify-content: center;*/
+      justify-content: flex-end;
+    }
+    .judul{
+      padding: 0 9px;
+      text-align: center;
+      color: white;
+      margin-bottom: 70px;
+    }
+    form{
+      z-index: 999;
+      margin: 0 auto;
+      max-width: 500px;
+      min-width: 300px;
+      width: 60vw;
+      padding: 2.5rem 6px 2.5rem 0;
+      /*padding-bottom: 2em;
+      background-color: #1b1b32;*/
+      background-color: #133b5c;
+      color: white;
+      opacity: 0.9;
+    }
+    label{
+      display: block;
+      margin: 0.5rem 0;
+    }
+    input, textarea, select{
+      margin: 10px 0 0 0;
+      width: 100%;
+      min-height: 2em;
+    }
+    fieldset{
+      border: none;
+      /*padding: 0 15px 0 0;*/
+    }
+    .inline {
+      width: unset;
+      margin: 0 0.5em 0 0;
+      vertical-align: middle;
+      float: left;
+    }
+    .tombol{
+      /*margin-left: 7px;*/
+      text-align: center;
+    }
+    input[type="submit"]{
+      width: 96%;
+      display: block;
+      margin: 1em 0 0 14px;
+      /*margin: 0 auto;*/
+      height: 1em;
+      font-size: 1.1rem;
+      background-color: darkred;
+      color: white;
+      min-width: 250px;
+      border: 2px solid white;
+    }
+    
+    /*ini ukuran hp*/
+   @media screen and (max-width: 600px) {
+      .container{
+        height: 100%;
+        width: 100%;
+        padding-top: 30px;
+        background: -webkit-linear-gradient(left, #b92b27, #1565c0);
+      }
+      .judul{
+        margin-bottom: 40px;
+      }
+      .tombol{
+        text-align: center;
+      }
+      input[type="submit"]{
+        width: 93%;
+        /*color: lime;*/
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+<div class="judul">
+<h1 id="title">FreeCodeCamp Survey Form</h1>
+<p id="description">Thank you for taking the time to help us improve the platform</p>
+</div>
+<form id="survey-form">
+  <fieldset>
+  <label for="name" id="name-label">Name 
+  <input id="name" type="text" name="nama" placeholder="Enter Your Name" onkeyup=handleInput(this) required>
+  </label>
+  <label for="email" id="email-label">Email 
+  <input id="email" type="email" name="email" placeholder="Enter Your Email" onkeyup=handleInput(this) required>
+  </label>
+  <label for="umur" id="number-label">Age (optional) 
+  <!--<input id="umur" type="number" placeholder="Age"> 13 120-->
+  <input id="umur" type="number" name="umur" min="120" max="1" onkeyup=handleInput(this) placeholder="Age">
+  </label>
+  
+  <label for="dropdrown">Which option best describes your current role?
+    <select id="dropdown">
+      <option value="undefined">
+        Select current role</option>
+      <option value="Student">Student</option>
+      <option value="Full Time Job">Full Time Job</option>
+      <option value="Full Time Learner">Full Time Learner</option>
+      <option value="Prefer Not To Say">Prefer Not To Say</option>
+    <option value="Other">Other</option>
+    </select>
+  </label>
+  </fieldset>
+  
+  <fieldset>
+    <h2>Would you recommend freeCodeCamp to a friend?</h2>
+    <label for="definitely">Definitely 
+    <input type="radio" class="inline" id="definitely" name="pilihan" value="definitely">
+    </label>
+    <label for="maybe">Maybe 
+    <input type="radio" class="inline" id="maybe" name="pilihan" value="maybe">
+    </label>
+    <label for="not-sure">Not sure 
+    <input type="radio" class="inline" id="not-sure" name="pilihan" value="not-sure">
+    </label>
+    <label for="">
+      What is your favorite feature of freeCodeCamp?
+      <select name="" id="">
+        <option value="">Select an option</option>
+        <option value="">Challenges</option>
+       <option value="">Projects</option>
+      <option value="">Community</option>
+    <option value="">Open Source</option>
+      </select>
+    </label>
+  </fieldset>
+  
+  <fieldset>
+    <h2>What would you like to see improved? (Check all that apply)</h2>
+    <label for="fe">Front-End Projects 
+  <input type="checkbox" class="inline" value="fe">
+    </label>
+    <label for="be">Back-End Projects
+      <input type="checkbox" class="inline" value="be">
+    </label>
+    <label for="data">Data Visualization
+      <input type="checkbox" class="inline" value="data">
+    </label>
+    <label for="challenges">Challenges
+      <input type="checkbox" class="inline" value="challenges">
+    </label>
+    <label for="open">Open Source Community
+      <input type="checkbox" class="inline" value="open">
+    </label>
+    <label for="gitter">Gitter Help Rooms
+      <input type="checkbox" class="inline" value="gitter">
+    </label>
+    <label for="videos">Videos
+      <input type="checkbox" class="inline" value="videos">
+    </label>
+    <label for="citty">Citty Meetups
+      <input type="checkbox" class="inline" value="citty">
+    </label>
+    <label for="wiki">Wiki
+      <input type="checkbox" class="inline" value="wiki">
+    </label>
+    <label for="forum">Forum
+      <input type="checkbox" class="inline" value="forum">
+    </label>
+    <label for="additional-courses">Additional Courses
+      <input type="checkbox" class="inline" value="additional-courses">
+    </label>
+    
+    <label for="comment"><h2>Any comments or suggestions?</h2>
+  <textarea name="comment" id="comment" cols="30" rows="4" placeholder="Enter your comment here..."></textarea>
+  </label>
+  </fieldset>
+  <div class="tombol">
+  <input id="submit" type="submit" value="Submit" onclick="cetak()">
+  </div>
+  </form>
+</div>
+
+<script>
+  const selectForm = document.getElementById('dropdown');
+
+  const data = {};
+  function handleInput(e) {
+    data[e.name] = e.value;
+  }
+  
+  function cetak() {
+    const satu = `${data.nama}, ${data.email}, ${data.umur}, status: ${selectForm.value}`;
+    console.log(satu);
+    console.log(data);
+  }
+
+</script>
+
+</body>
+
+</html>

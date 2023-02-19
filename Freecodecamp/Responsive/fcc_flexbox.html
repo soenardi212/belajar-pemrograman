@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo Gallery</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f5f6f7;
+    }
+    .gallery{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 10px;
+      max-width: 1400px;
+      margin: 0 auto;
+      gap: 16px;
+    }
+    .gallery::after {/*after = sesudah*/
+      content: ""; /*before = sebelum*/
+      width: 350px;
+    }
+    .gallery img{
+      width: 100%;
+      max-width: 350px;
+      height: 300px;
+      object-fit: cover;
+    }
+    .header{
+      padding: 32px;
+      background-color: #0a0a23;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      border-bottom: 4px solid #fdb347;
+    }
+  </style>
+</head>
+
+<body>
+<header class="header">
+<h1>css flexbox photo gallery</h1>
+</header>
+<div class="gallery">
+ <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" alt="">
+ <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg" alt="">
+ <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg" alt="">
+ <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg" alt="">
+ <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg" alt="">
+ <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg" alt="">
+ <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg" alt="">
+ <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg" alt="">
+ <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg" alt="">
+</div>
+
+</body>
+<!-- The ::after pseudo-element membuat elemen yang merupakan anak terakhir dari elemen yang dipilih.  Anda dapat menggunakannya untuk menambahkan elemen kosong setelah gambar terakhir -->
+</html>
