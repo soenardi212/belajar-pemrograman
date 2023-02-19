@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is Google's maximum description length">
+  <title>Aplikasi quis</title>
+  <style>
+  @media(prefers-reduced-motion: no-preference){
+  *{
+    scroll-behavior: smooth;
+  }
+  }
+    body{
+     /* background-color: #f5f6f7;*/
+      color: greenyellow;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+    #logo{
+      width: max(100px, 18vw);
+      background-color: #0a0a32;
+      padding: 0.4rem;
+      aspect-ratio: 35/4;
+    }
+    header{
+      height: 50px;
+      width: 100%;
+      background-color: #1b1b32;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+    }
+    h1{
+      color: #f1be32;
+      font-size: min(5vw, 1.2em);
+      text-align: center;
+    }
+    main{
+      padding-top: 25px;
+      background-image: -webkit-linear-gradient(left, #667db6, #0082c8, #0082c8, #667db6);
+      padding-bottom: 40px;
+    }
+    section{
+      width: 80%;
+      margin: 0 auto 10px auto;
+      max-width: 600px;
+    }
+    h1, h2{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h2{
+      border-bottom: 4px solid #dfdfe2;
+      padding-top: 60px;
+      margin-top: 0;
+    }
+    nav > ul {
+      display: flex;
+      /*justify-content: space-evenly;*/
+      list-style: none;
+      align-items: center;
+      padding-inline-start: 0;
+      margin-block: 0;
+      height: 100%;
+      flex-wrap: wrap;
+    }
+    nav > ul > li{
+      color: #dfdfe2;
+      margin: 0 0.2rem;
+      padding: 0.2rem;
+      display: block;
+    }
+    li > a{
+      /*margin: 0 5px;*/
+      color: inherit;
+      text-decoration: none;
+    }
+    nav > ul > li:hover{
+      cursor: pointer;
+      background-color: #dfdfe2;
+      color: #1b1b32;
+    }
+    .question-block{
+      text-align: left;
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding-top: 5px;
+    }
+    p{
+      margin-top: 5px;
+      padding-left: 15px;
+      font-size: 20px;
+    }
+    p::before{
+      content: "Question #";
+    }
+    .question{
+      border-style: none;
+      padding-bottom: 0;
+    }
+    .answers-list{
+      padding: 0;
+      list-style: none;
+    }
+    .sr-only{
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .info{
+      padding: 1px 0 0 1px;
+    }
+    .formrow{
+      margin-top: 1px;
+      padding: 0 1px;
+    }
+    .info input{
+      width: 50%;
+      text-align: left;
+    }
+    input{
+      font-size: 15px;
+    }
+    .info label{
+      width: 10%;
+      min-width: 55px;
+    }
+    .info > input, .info > label{
+      text-align: right;
+      display: inline-block;
+    }
+    button{
+      display: block;
+      margin: 40px auto 0 auto;
+      width: 40%;
+      padding: 15px;
+      font-size: 23px;
+      background: #d0d0d5;
+      border: 3px solid #3b3b4f;
+    }
+    footer{
+      background-color: #2a2a40;
+      display: flex;
+      justify-content: center;
+    }
+    footer, footer a{
+      color: #dfdfe2;
+    }
+    address{
+      text-align: center;
+      padding: 1px;
+    }
+    
+  </style>
+</head>
+
+<body>
+<header>
+<img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" id="logo">
+  <h1>HTML/CSS Quiz</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="#student-info" accesskey="s">INFO</a>
+        </li>
+      <li>
+        <a href="#html-questions" accesskey="s">HTML</a>
+        </li>
+      <li>
+        <a href="#css-questions" accesskey="s">CSS</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+    <section role="region" aria-labelledby="student-info">
+      <h2 id="student-info">Petunjuk: Saya akan memilih Student Info</h2>
+      <div class="info">
+        <label for="student-name">Name :</label><input type="text" id="student-name" placeholder="Name" name="nama">
+      </div>
+      <div class="info">
+        <label for="student-email">Email :</label><input type="email" id="student-email" placeholder="Email" name="email">
+      </div>
+      <div class="info"><label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label><input id="birth-date" type="date" name="birth-date"></div>
+    </section>
+    
+    <section role="region" aria-labelledby="html-questions">
+      <h2 id="html-questions"> Petunjuk: Saya akan memilih HTML</h2>
+      <div class="question-block">
+        <p>1</p>
+        <fieldset class="question" name="pilihan">
+         <ul class="answers-list">
+           <li>
+             <label for="q1-a1">
+               <input type="radio" id="q1-a1" name="pilihan" value="true">True
+             </label>
+           </li>
+           <li>
+             <label for="q1-a2">
+               <input type="radio" id="q1-a2" name="pilihan" value="false">False
+             </label>
+           </li>
+         </ul>
+         <legend>The legend element represents a caption for the content of its parent fieldset element</legend>
+        </fieldset>
+      </div>
+      <div class="question-block">
+        <p>2</p>
+        <fieldset class="question" name="pilihan">
+          <ul class="answers-list">
+          <li>
+            <label for="q2-a1">
+              <input type="radio" id="q2-a1" name="drone" value="true">True
+            </label>
+          </li>
+          <li>
+            <label for="q2-a2">
+              <input type="radio" id="q2-a2" name="drone" value="false">False
+            </label>
+          </li>  
+          </ul>
+          <legend>A label element nesting an input element is required to have a for attribute with the same value as the input's id</legend>
+        </fieldset>
+      </div>
+    </section>
+    
+    <section role="region" aria-labelledby="css-questions">
+      <h2 id="css-questions"> Petunjuk: Saya akan memilih CSS</h2>
+      <div class="formrow">
+      <div class="question-block">
+        <label for="customer">
+        Are you a frontend developer?
+        </label>
+      </div>
+        <div class="answer">
+         <select name="customer" id="customer" required>
+           <option value="">Select an option</option>
+           <option value="yes">Yes</option>
+           <option value="no">No</option>
+         </select> 
+        </div>
+       
+       <div class="question-block">
+         <label for="css-question">Do you have any questions:</label>
+       </div>
+      <div class="answer">
+        <textarea name="css-question" id="css-question" cols="29" rows="5" placeholder="Who is flexbox..."></textarea>
+      </div>
+      </div>
+      </section>
+      <button type="submit">Send</button>
+  </form>
+</main>
+<footer>
+  <address>
+  <a href="https://freecodecamp.org">
+  freeCodeCamp</a><br />
+  San Francisco<br />
+  California<br />
+  USA</a>
+  </address>
+</footer>
+</body>
+
+</html>

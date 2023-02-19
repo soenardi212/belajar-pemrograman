@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pseudo_css</title>
+  <style>
+    span[class~="sr-only"]{
+      border: 0 !important;
+      color: red !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+      clip-path: inset(50%) !important;
+      -webkit-clip-path: inset(50%) !important;
+      width: 1px !important;
+      height: 1px !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      position: absolute !important;
+    }
+    html{
+      box-sizing: border-box;
+    }
+    body{
+      font-family: sans-serif;
+      color: #0a0a23;
+    }
+    h1{
+      max-width: 37.25rem;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem;
+      
+    }
+    h1 .flex{
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+    h1 .flex span:first-of-type{
+      font-size: 0.7em;
+      color: red;/*first = pertama*/
+    }
+    h1 .flex span:last-of-type {
+      font-size: 1.2em;
+      color: blue;/*last = terakhir*/
+    }
+    section{
+      max-width: 40rem;
+      margin: 0 auto;
+      border: 2px solid #d0d0d5;
+    }
+    #years{
+      display: flex;
+      justify-content: flex-end;
+      position: sticky;
+      top: 0;
+      color: #fff;
+      background-color: #0a0a23;
+      z-index: 999;
+      margin: 0 -2px;
+      padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+    }
+    #years span[class]{
+      font-weight: bold;
+      text-align: right;
+      width: 4.5rem;
+    }
+    .table-wrap{
+      padding: 0 0.75rem 1.5rem 0.75rem;
+    }
+    table{
+      border-collapse: collapse;
+      border: 0;
+      width: 100%;
+      position: relative;
+      margin-top: 3rem;
+    }
+    table caption{
+      color: #356eaf;
+      font-size: 1.3em;
+      font-weight: normal;
+      position: absolute;
+      top: -2.25rem;
+      left: 0.5rem;
+    }
+    tbody td{
+      width: 100vw;
+      min-width: 4rem;
+      max-width: 4rem;
+    }
+    tbody th{
+      width: calc(100% - 12rem);
+    }
+    tr[class="total"]{
+      border-bottom: 4px double #0a0a23;
+      font-weight: bold;
+    }
+    tr[class="total"] th{
+      padding: 0.5rem 0 0.25rem 0.5rem;
+      text-align: left;
+    }
+    tr.total td{
+      text-align: right;
+      padding: 0 0.25rem;
+      color: green;
+    }
+    tr.total td:nth-of-type(3){
+      padding-right: 0.5rem;
+      background-color: red;
+    }
+    tr.total:hover{
+      background-color: #99c9ff;
+    }
+    td[class="current"]{
+      font-style: italic;
+    }
+    tr[class="data"]{
+      background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+    }
+    tr.data th{
+      text-align: left;
+      padding: 0.3rem 0 0 0.5rem;
+    }
+    tr.data th .description{
+      font-style: italic;
+      font-weight: normal;
+      display: block;
+      padding: 1rem 0 0.75rem;
+      margin-right: -13.5rem;
+    }
+    tr.data td{
+      vertical-align: top;
+      text-align: right;
+      padding: 0.3rem 0.25rem 0;
+    }
+    tr.data td:last-of-type{
+      padding-right: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+<main>
+  <section>
+    <h1>
+   <span class="flex">
+     <span>AcmeWidgetCorp</span>
+     <span>Balance Sheet</span>
+   </span> 
+    </h1>
+    <div id="years" aria-hidden="true">
+    <span class="year">2019</span>
+    <span class="year">2020</span>
+    <span class="year">2021</span>
+    </div>
+    
+    <div class="table-wrap">
+      <table>
+        <caption>Asset</caption>
+        <thead>
+          <tr>
+            <td></td>
+            <th class="current">
+   <span class="sr-only year">2019</span>
+          </th>
+        <th class="current">
+  <span class="sr-only year">2020</span>
+     </th>
+   <th class="current">
+<span class="sr-only year">2021</span>
+ </th>
+  </tr>
+   </thead>
+    <tbody>
+     <tr class="data">
+       <th>Cash<span class="description"> This is the cash we currently have on hand.</span></th>
+        <td class="current">$25</td>
+        <td class="current">$30</td>
+        <td class="current">$28</td>
+      </tr> 
+       <tr class="data"><th>Checking
+<span class="description"> Our primary transactional account.</span>
+      </th>
+      <td class="current">$54</td>
+      <td class="current">$56</td>
+      <td class="current">$53</td>
+       </tr> 
+        <tr class="data">
+    <th>Savings
+      <span class="description"> Funds set aside for emergencies.</span>
+    </th>
+    <td class="current">$500</td>
+    <td class="current">$650</td>
+    <td class="current">$728</td>
+      </tr>
+      <tr class="total">
+       <th>Total <span class="sr-only">Assets</span></th>
+       <td class="current">$579</td>
+       <td class="current">$736</td>
+       <td class="current">$809</td>
+       </tr> 
+        </tbody>
+      </table>
+      
+      <table>
+        <caption>Liabilities</caption>
+        <thead>
+          <tr>
+          <td></td>
+          <th>
+<span class="sr-only">2019</span>
+</th>
+<th>
+<span class="sr-only">2020</span>
+</th>
+<th>
+<span class="sr-only">2021</span>
+</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr class="data">
+  <th>Loans
+  <span class="description">The outstanding balance on our startup loan.</span></th>
+  <td class="current">$500</td>
+  <td class="current">$250</td>
+  <td class="current">$0</td>
+</tr>
+<tr class="data">
+   <th>Expenses
+  <span class="description">Annual anticipated expenses, such as payroll.</span></th>
+  <td class="current">$200</td>
+  <td class="current">$300</td>
+  <td class="current">$400</td>
+</tr>
+<tr class="data">
+  <th>Credit
+  <span class="description">The outstanding balance on our credit card.</span></th>
+  <td class="current">$50</td>
+  <td class="current">$50</td>
+  <td class="current">$75</td>
+</tr>
+<tr class="total">
+  <th>Total <span class="sr-only">Liabilities</span></th>
+  <td class="current">$750</td>
+  <td class="current">$600</td>
+  <td class="current">$475</td>
+</tr>
+        </tbody>
+      </table>
+      
+      <table>
+        <caption>Net Worth</caption>
+        <thead>
+<tr>
+  <td></td>
+  <th class="current">
+   <span class="sr-only year">2019</span>
+  </th>
+  <th class="current">
+  <span class="sr-only year">2020</span>
+  </th>
+  <th class="current">
+  <span class="sr-only year">2021</span>
+  </th>
+</tr>
+        </thead>
+        <tbody>
+<tr class="total">
+  <th>Total <span class="sr-only">Net Worth</span></th>
+  <td class="current">$-171</td>
+  <td class="current">$136</td>
+  <td class="current">$334</td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+</body>
+<!-- tr digunakan utk menunjukkan baris tabel -->
+<!--td = utk menunjukkan sel data -->
+<!-- th = utk menunjukkan sel header -->
+<!-- Pemilih span[class~="sr-only"] akan memilih elemen rentang apa pun yang kelasnya menyertakan sr-only-->
+<!-- Properti klip CSS digunakan untuk menentukan bagian yang terlihat dari suatu elemen -->
+<!-- :first-of-type pseudo-selector digunakan untuk menargetkan elemen pertama yang cocok dengan pemilih -->
+<!-- Gaya teks dalam elemen #years Anda dengan membuat pemilih #years span[class] .  Sintaks span[class] akan menargetkan setiap elemen span yang memiliki kumpulan atribut kelas, berapa pun nilai atributnya. -->
+<!-- Perbedaan utama antara tr[class="total"] dan tr.total adalah yang pertama akan memilih elemen tr di mana satu-satunya kelas adalah total.  Yang kedua akan memilih elemen tr di mana kelas menyertakan total. -->
+</html>
