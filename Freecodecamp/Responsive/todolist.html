@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To Do List</title>
+</head>
+<style>
+   *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   body{
+     /*min-width: 250px;*/
+   }
+   .container{
+     background-color: black;
+     text-align: center;
+     padding: 10px 40px 30px 40px;
+     border: 15px solid lightblue;
+     /*padding: 30px 40px;*/
+     position: fixed;
+     z-index: 999;
+   }
+   .container:after{
+     display: table;
+     content: "";
+     clear: both;
+   }
+   h3{
+     color: white;
+     text-align: center;
+     border: 2px solid white;
+     margin-bottom: 10px;
+     border-style: none none solid none;
+     display: inline-block;
+     
+   }
+   input{
+     width: 76%;
+     /*width: 53vw;*/
+     border: none;
+     padding: 3px;
+     float: left;
+     margin: 0;
+     border-radius: 0;
+   }
+   .addBtn{
+     background-color: #d9d9d9;
+     color: #555;
+     width: 24%;
+     /*width: 20vw;*/
+     float: left;
+     text-align: center;
+     margin: 0;
+     padding: 2px;
+     font-size: 15px;
+   }
+   .addBtn:hover{
+     background-color: #bbb;
+   }
+   ul{
+     margin: 0;
+     padding: 0;
+     position: relative;
+     top: 150px;
+   }
+   ul li{
+     background: antiquewhite;
+     padding: 10px 40px;
+     list-style-type: none;
+     transition: 0.2s;
+     user-select: none;
+     -webkit-user-select: none;
+     -ms-user-select: none;
+     -moz-user-select: none;
+     cursor: pointer;
+   }
+   ul li:hover{
+     background: #ddd;
+   }
+   ul li:nth-child(odd) {
+     background: grey;
+     color: white;
+   }
+   ul li.checked{
+     background: black;
+     text-decoration: line-through;
+     color: white;
+   }
+   ul li.checked::before{
+     content: "";
+     width: 7px;
+     height: 15px;
+     position: absolute;
+     border-color: #fff;
+     border-style: solid;
+     transform: rotate(45deg);
+     /*top: 152px;*/
+     left: 16px;
+     border-width: 0 2px 2px 0;
+   }
+   .close{
+     /*padding: 12px 16px 12px 16px;*/
+     float: right;
+     color: red;
+     position: relative;
+     top: -8px;
+     font-size: 28px;
+   }
+   .close:hover{
+     background-color: #f44336;
+     color: white;
+   }
+   .footer{
+     color: white;
+     position: relative;
+     top: 20px;
+     font-family: "Font Digital";
+     font-size: 13px;
+   }
+   #tgl{
+     float: left;
+     /*background-color: black;*/
+   }
+    /*@font-face {
+      font-family: "Font Digital";
+      src: url('digital-7.ttf');
+    }*/
+   #jam{
+     float: right;
+     /*font-family: "Font Digital";*/
+   }
+</style>
+<body>
+  <div id="myDIV" class="container">
+    <h3>List Of Warehouse Items</h3>
+    <input type="text" id="myInput" placeholder="Nama Barang...">
+    <span onclick="newElement()" class="addBtn">add</span>
+    
+    <div class="footer">
+    <div id="tgl" class="satu"></div>
+    <div id="jam" class="dua">test</div>
+    </div>
+  </div>
+ 
+  <ul id="myUL">
+   <li>Beras</li>
+     <li class="checked">Minyak</li>
+       <li>Susu</li>
+         <li>Garam</li>
+           <li>Kecap</li>
+             <li>Saus</li>
+               </ul>
+  <script>
+   var myNodeList = document.getElementsByTagName('LI');
+   var i;
+   for(i = 0; i < myNodeList.length; i++){
+     var span = document.createElement('SPAN');
+     var txt = document.createTextNode('\u00D7');
+     span.className = 'close';
+     span.appendChild(txt);
+     myNodeList[i].appendChild(span);
+   }
+  
+   //close
+   var close = document.getElementsByClassName('close');
+   var i;
+   for(i=0; i < close.length; i++) {
+     close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = 'none';
+     }
+   }
+ 
+   //checked
+   var list = document.querySelector('ul');
+   list.addEventListener('click', function(ev) {
+     if(ev.target.tagName === 'LI') {
+       ev.target.classList.toggle('checked');
+     }
+   }, false);
+ 
+   //create new list
+   function newElement() {
+     var li = document.createElement('li');
+     var inputValue = document.getElementById('myInput').value;
+     var t = document.createTextNode(inputValue);
+     li.appendChild(t);
+     if(inputValue === '') {
+       alert('Anda harus menulis sesuatu');
+     } else {
+       document.getElementById('myUL').appendChild(li);
+     }
+   
+   document.getElementById('myInput').value = '';
+   
+   var span = document.createElement('SPAN');
+   var txt = document.createTextNode('\u00D7');
+   span.className = 'close';
+   span.appendChild(txt);
+   li.appendChild(span);
+   
+   for(i = 0; i < close.length; i++) {
+     close[i].onclick = function() {
+       var div = this.parentElement;
+       div.style.display = 'none';
+     }
+   }
+ }
+  
+    //jam
+    window.onload = function() {
+      jam();
+      tgl();
+    };
+  
+    function jam() {
+      let a = document.getElementById('jam'),
+      //console.log(Date());
+      satu = new Date(), h, m, s;
+      h = set(satu.getHours());
+      m = set(satu.getMinutes());
+      s = set(satu.getSeconds());
+      const waktu = `${h}:${m}:${s}`;
+      a.innerHTML = waktu;
+  
+      setTimeout('jam()', 1000);
+     };
+    
+     function tgl() {
+      let x = document.getElementById('tgl'),
+
+      myWaktu = new Date(), b;
+      b = myWaktu.toDateString();
+      const tanggal = `${b}`;
+      x.innerHTML = tanggal;
+     };
+  
+    function set(a) {
+      a = a < 10 ? '0' + a : a;
+      return a;
+    };
+    
+    let arr = "[s_e_k_e_d_a_r__h_o_b_b_y]";
+    let arr1 = 'hoby';
+const arr2 = arr + arr1;
+const arr3 = arr2.split('');
+console.log('%c'+arr,'color:#32de8a;');
+    
+    const xyz = Date();
+    console.log('%c'+xyz,'color:#32de8a;');
+    
+  </script>
+  
+</body>
+
+</html>
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <h1 id="tgl"></h1>
+<script>
+  window.onload = function() { tgl(); };
+  
+    function tgl() {
+      let a = document.getElementById('tgl'),
+      //console.log(Date());
+      satu = new Date(), h, m, s;
+      b = satu.toDateString();
+      h = satu.getMonth() + 1;
+      m = satu.getDate();
+      s = satu.getFullYear();
+      //const waktu = `${m}-${h}-${s}`;
+      const waktu = `${b}`;
+      a.innerHTML = waktu;
+  
+      //setTimeout('jam()', 1000);
+    };
+  
+   /* function set(a) {
+      a = a < 10 ? '0' + a : a;
+      return a;
+    };*/
+  
+</script>
+</body>
+
+</html>

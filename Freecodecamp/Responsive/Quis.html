@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>latihan</title>
+</head>
+<style>
+  #demo {
+    color: red;
+    text-align: center;
+  }
+</style>
+<body>
+  <h3 id="demo"></h3>
+  
+<script>
+let x = 0;
+const benar = 'Selamat Anda Benar';
+const salah = 'Maaf Jawaban Anda Salah';
+
+  const z = alert('Hello selamat datang di program awal js qu');
+  const nama = prompt('Masukkan nama anda');
+  const nama1 = alert(`Ayo ${nama}, \nMari kita mulai programnya..!!!`);
+  
+  let a = prompt('Soal No.1 \nSiapakah Nama Nabi Yg Terakhir..???');
+  switch(a) {
+    case 'Muhammad':
+      case 'muhammad':
+        case 'MUHAMMAD':
+          alert(`${benar}`);
+           x += 20 ;
+             break;
+              default:
+               alert(`${salah}`);
+                //x -= 20;
+                 break;
+  }
+  const b = parseInt(prompt('Soal No.2 \nAda Berapakah Jumlah Rukun Islam..???'));
+  switch(b) {
+    case 5:
+      alert(`${benar}`);
+        x += 20;
+          break;
+            default:
+              alert(`${salah}`);
+                //x -= 20;
+                  break;
+  }
+  const c = prompt('Soal No.3 \nSiapakah Nama Ayah Nabi Muhammad..???');
+  switch(c) {
+    case 'Abdullah':
+      case 'abdullah':
+        case 'ABDULLAH':
+          alert(`${benar}`);
+           x += 20;
+            break;
+              default:
+               alert(`${salah}`);
+                // x -= 20;
+                  break;
+  }
+  const d = prompt('Soal No.4 \nPada Tanggal & Tahun Berapakah Nabi Muhammad Di Lahirkan..???');
+  switch(d) {
+    case '12 RABIUL AWAL TAHUN GAJAH':
+      case '12 Rabiul Awal Tahun Gajah':
+        case '12 rabiul awal tahun gajah':
+          alert(`${benar}`);
+           x += 20;
+             break;
+               default:
+                 alert(`${salah}`);
+                  //x -= 20;
+                    break;
+  }
+  const e = prompt('Soal No.5 \nDimanakah Nabi Muhammad Di Lahirkan');
+  switch(e) {
+    case 'MAKKAH':
+      case 'Makkah':
+        case 'makkah':
+         case 'kota makkah':
+           case 'Kota Makkah':
+             alert(`${benar}`);
+               x += 20;
+                 break;
+                  default:
+                    alert(`${salah}`);
+                      //x -= 20;
+                        break;
+  }
+  document.getElementById('demo').innerHTML=
+  (`Selamat ${nama} anda mendapatkan nilai ${x}`);
+  console.log(`Selamat ${nama} anda mendapatkan nilai ${x}`);
+</script>
+</body>
+
+</html>
